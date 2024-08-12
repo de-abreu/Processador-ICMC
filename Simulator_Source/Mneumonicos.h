@@ -2,7 +2,7 @@
 #define MNEUMONICOS_H
 
 #define TAMANHO_PALAVRA 16
-#define TAMANHO_MEMORIA 32768
+#define TAMANHO_MEMORIA 65536
 
 #define LOAD 48
 #define STORE 49

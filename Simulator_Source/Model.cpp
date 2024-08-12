@@ -61,7 +61,7 @@ Model::Model(char *cpuram, char *charmap)
 
 	sprintf(this->cpuram, "CPURAM: %s", cpuram);
 	sprintf(this->charmap, "Charmap: %s", charmap);
-	
+
 	varDelay = MEDIA;
 	automatico = false;
 
@@ -79,9 +79,9 @@ void Model::setController(ControllerInterface *controller)
 void Model::reset()
 {	pc = 0;
 	ir = 0;
- 	sp = 0x7FFC;
+ 	sp = 0xFFFF;
 	auxpc = 0;
-	pc2 = 0;	
+	pc2 = 0;
 
 	int i, tmp;
 	int vetor[] = {0, 0, 0, 0, 0 , 0, 0, 0};
@@ -96,7 +96,7 @@ void Model::reset()
 
 	setPC(0);
 	setIR(0);
-	setSP(0x7FFC);
+	setSP(0xFFFF);
 
 	setRegistrador(vetor);
 
@@ -147,7 +147,7 @@ int Model::getIR()
 
 void Model::setIR(int valor)
 {	if(valor >= 0)
-		ir = valor;	
+		ir = valor;
 	Reg->updateIR();
 }
 
@@ -432,7 +432,7 @@ unsigned int Model::model_rotr(const unsigned int value, int shift)
 }
 
 void Model::delay()
-{ 
+{
 /*
 	void Model::delay(clock_t wait)
 
@@ -450,7 +450,7 @@ int Model::getDelay()
 {	return varDelay; }
 
 void Model::setDelay(int valor)
-{	
+{
 	/*
 	// se igual nao faz nada
 		if(varDelay == valor)
@@ -473,7 +473,7 @@ void Model::processador()
   // ----- Ciclo de Busca: --------
 	ir = mem[pc];
 
-	if(pc > 32767)
+	if(pc > 65535)
 	{ printf("Ultrapassou limite da memoria, coloque um jmp no fim do código\n");
 		exit(1);
 	}
@@ -701,10 +701,10 @@ void Model::processador()
         	}
         break;
 
-      case SOUND: 
+      case SOUND:
         play_note(reg[rx], reg[ry], reg[rz]);
         break;
-    
+
       case SUB:
         reg[rx] = reg[ry] - reg[rz]; // Subtracao sem Carry
 

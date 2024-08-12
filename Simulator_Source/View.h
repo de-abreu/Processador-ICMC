@@ -28,18 +28,18 @@ class View : public Instrucoes, public Registradores, public Video
 		GtkWidget *window;
 
 		// ------ labels ---------
-		GtkWidget *labelEnd, 
+		GtkWidget *labelEnd,
 							*labelP,
-							*labelCharmap, 
+							*labelCharmap,
 							*labelCPURAM;
 
 		static GtkWidget **TextEntryRegs,
 												*labelR;
 
-		GtkWidget *labelReg[8], 
-							*labelIr, 
-							*labelSp, 
-							*labelPc, 
+		GtkWidget *labelReg[8],
+							*labelIr,
+							*labelSp,
+							*labelPc,
 							*labelFR;
 
 		char textoLabelPC[16];
@@ -91,7 +91,7 @@ class View : public Instrucoes, public Registradores, public Video
 		static gboolean ViewerExpose(GtkWidget *widget, GdkEventExpose *event, gpointer data);
 
 		// ----- Instrucoes -------
-		void updateInstrucoes(unsigned int atual, unsigned int proxima, unsigned int linhas); 
+		void updateInstrucoes(unsigned int atual, unsigned int proxima, unsigned int linhas);
 
 		void Imprime(unsigned int atual, unsigned int proxima, unsigned int linhas);
 
