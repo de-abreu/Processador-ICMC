@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[1903],{1912:s=>{s.exports=JSON.parse('{"blogBasePath":"/Processador-ICMC/blog","blogTitle":"Blog","authorsListPath":"/Processador-ICMC/blog/authors"}')}}]);
