@@ -3,11 +3,13 @@ import TabItem from '@theme/TabItem';
 
 # Montador
 
-Software responsável pela tradução das [instruções em linguagem assembly](/docs/linguagem-assembly/instrucoes) a sua forma correspondente em código binário para execução pela placa FPGA. Por exemplo:
+Software responsável pela tradução das [instruções em linguagem assembly](/docs/linguagem-assembly/instrucoes) a sua forma correspondente em código binário para execução pela placa FPGA.
+
+Por exemplo:
 
 <Tabs>
-    <TabItem value="asm" label="Assembly">
-        ```assembly
+    <TabItem value="Assembly">
+        ```asmatmel
         ; Prints "Hello Mom" at the top left corner of the screen and halts.
 
         jmp main
@@ -29,12 +31,10 @@ Software responsável pela tradução das [instruções em linguagem assembly](/
                 jmp printLoop
             endLoop:
                 halt
-
-
             ```
         </TabItem>
 
-        <TabItem value="mif" label="Binário">
+        <TabItem value="Binário">
         ```
         -- Codigo gerado pelo montador
         WIDTH=16;
@@ -84,5 +84,52 @@ Software responsável pela tradução das [instruções em linguagem assembly](/
 
 ## Instalação
 O montador encontra-se disponível em duas versões, cujo código fonte pode ser baixado em um arquivo zip por meio dos seguintes links:
-- [`v1.0.0 stable`](https://github.com/de-abreu/Processador-ICMC/releases/download/v1.0.0/assembler-stable.zip)
-- [`v2.1.0 beta`]() (disponível apenas para Linux)
+
+- [`v1.0.0 stable`](https://github.com/de-abreu/Processador-ICMC/raw/master/assembler/assembler-stable.zip) (recomendado)
+- [`v2.1.0 beta`](https://github.com/de-abreu/Processador-ICMC/raw/master/assembler/assembler-stable.zip)
+
+Para instalar execute os seguintes comandos:
+
+<Tabs>
+    <TabItem value="stable">
+        ```bash
+        unzip assembler-stable.zip # Extrai a pasta "stable"
+        cd stable # Acessa a pasta stable
+        gcc *.c -o montador # Compila o código-fonte para gerar o executável "montador"
+        ```
+    </TabItem>
+    <TabItem value="beta">
+        ```bash
+        unzip assembler-beta.zip # Extrai a pasta "beta"
+        cd beta# Acessa a pasta beta
+        gcc *.c -o montador # Compila o código-fonte para gerar o executável "montador"
+        ```
+    </TabItem>
+</Tabs>
+
+Com isso você terá em mãos o executável `montador`.Leve-o ao diretório em que estiver trabalhando, conforme sua conveniência.
+
+## Uso
+
+Considerando um arquivo assembly `jogo.asm`, execute o seguinte comando opara obter um arquivo binário `jogo.mif` (a operação é análoga para quaisquer outros nomes de arquivo):
+
+
+<Tabs>
+    <TabItem value="1.0.0" label="stable">
+        ```bash
+        ./montador jogo.asm jogo.mif
+        ```
+    </TabItem>
+    <TabItem value="2.1.0" label="beta">
+        ```bash
+        ./montador jogo.asm
+        ```
+    </TabItem>
+</Tabs>
+
+Se não houverem erros de sintaxe, o arquivo `jogo.mif` será gerado. Doutra forma, uma mensagem de erro correspondente será emitida.
+
+:::info TODO
+1. Encontrar e detalhar a instalação para usuários de Windows
+2. Detalhar mais opções de uso do montador
+:::

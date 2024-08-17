@@ -12,7 +12,7 @@ const FeatureList: FeatureItem[] = [
     {
         // TODO: Insert link to the Assembly language documentation
         title: 'Fácil aprendizado',
-        Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+        Svg: require('@site/static/img/icons8-code.svg').default,
         description: (
             <>
                 Linguagem Assembly de uso didático, extensivamente documentada e com exemplos de uso.
@@ -22,7 +22,7 @@ const FeatureList: FeatureItem[] = [
     {
         // TODO: Insert link to the Setup documentation
         title: 'Prototipável',
-        Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+        Svg: require('@site/static/img/icons8-chip.svg').default,
         description: (
             <>
                 Projetado e testado para uso em placas Intel FPGA, dispondo de uma variedade de simuladores.
@@ -32,7 +32,7 @@ const FeatureList: FeatureItem[] = [
     {
         // TODO: Insert link to the game library page
         title: 'Biblioteca de jogos',
-        Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+        Svg: require('@site/static/img/icons8-games-folder.svg').default,
         description: (
             <>
                 Jogos e respectivos códigos-fonte disponíveis para consulta.
