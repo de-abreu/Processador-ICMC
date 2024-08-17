@@ -3,12 +3,12 @@ import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-    title: 'Processador-ICMC',
-    tagline: 'Um ambiente de desenvolvimento completo para o ensino de arquitetura de computadores',
+    title: 'Processador ICMC',
+    tagline: 'Ensino de arquitetura de computadores por meio do desenvolvimento de jogos',
     favicon: 'img/favicon.ico',
 
     // Set the production url of your site here
-    url: 'https://de-abreu.github.io/Processador-ICMC',
+    url: 'https://de-abreu.github.io',
     // Set the /<baseUrl>/ pathname under which your site is served
     // For GitHub pages deployment, it is often '/<projectName>/'
     baseUrl: '/Processador-ICMC/',
@@ -63,24 +63,28 @@ const config: Config = {
         // Replace with your project's social card
         image: 'img/docusaurus-social-card.jpg',
         navbar: {
-            title: 'My Site',
+            title: 'Processador ICMC',
             logo: {
-                alt: 'My Site Logo',
-                src: 'img/logo.svg',
+                alt: 'ICMC',
+                src: 'img/logo.png',
             },
             items: [
                 {
                     type: 'docSidebar',
                     sidebarId: 'tutorialSidebar',
                     position: 'left',
-                    label: 'Tutorial',
+                    label: 'Documentação',
                 },
                 { to: '/blog', label: 'Blog', position: 'left' },
                 {
-                    href: 'https://github.com/facebook/docusaurus',
+                    href: 'https://github.com/de-abreu/Processador-ICMC',
                     label: 'GitHub',
                     position: 'right',
                 },
+                {
+                    type: 'localeDropdown',
+                    position: 'right'
+                }
             ],
         },
         footer: {
@@ -121,16 +125,16 @@ const config: Config = {
                         },
                         {
                             label: 'GitHub',
-                            href: 'https://github.com/facebook/docusaurus',
+                            href: 'https://de-abreu.github.io/Processador-ICMC/',
                         },
                     ],
                 },
             ],
-            copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+            copyright: `Copyright © ${new Date().getFullYear()} Eduardo do Valle Simões. Feito com Docusaurus.`,
         },
         prism: {
-            theme: prismThemes.github,
-            darkTheme: prismThemes.dracula,
+            theme: prismThemes.oneLight,
+            darkTheme: prismThemes.oneDark,
         },
     } satisfies Preset.ThemeConfig,
 };

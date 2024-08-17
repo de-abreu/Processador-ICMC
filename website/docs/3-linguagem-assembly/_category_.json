@@ -1,0 +1,7 @@
+{
+    "label": "Linguagem Assembly",
+    "link": {
+        "type": "generated-index",
+        "description": "Especificação da linguagem e lista das instruções implementadas para o Processador ICMC"
+    }
+}

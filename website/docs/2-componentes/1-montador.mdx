@@ -1,0 +1,88 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Montador
+
+Software responsável pela tradução das [instruções em linguagem assembly](/docs/linguagem-assembly/instrucoes) a sua forma correspondente em código binário para execução pela placa FPGA. Por exemplo:
+
+<Tabs>
+    <TabItem value="asm" label="Assembly">
+        ```assembly
+        ; Prints "Hello Mom" at the top left corner of the screen and halts.
+
+        jmp main
+
+        hello: string "Hello Mom"
+
+        main:
+            loadn r0, #0         ; r0 = 0
+            loadn r1, #hello     ; r1 = Pointer to the string to be printed
+            loadn r2, #0         ; r2 = Screen position
+
+            printLoop:
+                loadi r3, r1     ; Retrieve character to be printed
+                cmp r0, r3       ; and check if it is the terminator character.
+                jeq endLoop      ; Escape if it is.
+                outchar r3, r2   ; Otherwise, print it and continue.
+                inc r1           ; Increment string pointer
+                inc r2           ; Increment screen position
+                jmp printLoop
+            endLoop:
+                halt
+
+
+            ```
+        </TabItem>
+
+        <TabItem value="mif" label="Binário">
+        ```
+        -- Codigo gerado pelo montador
+        WIDTH=16;
+        DEPTH=65536;
+        ADDRESS_RADIX=UNS;
+        DATA_RADIX=BIN;
+        CONTENT BEGIN
+        0:0000100000000000;
+        1:0000000000001100;
+        2:0000000001001000;
+        3:0000000001100101;
+        4:0000000001101100;
+        5:0000000001101100;
+        6:0000000001101111;
+        7:0000000000100000;
+        8:0000000001101101;
+        9:0000000001101111;
+        10:0000000001101101;
+        11:0000000000000000;
+        12:1110000000000000;
+        13:0000000000000000;
+        14:1110000010000000;
+        15:0000000000000010;
+        16:1110000100000000;
+        17:0000000000000000;
+        18:1111000110010000;
+        19:0101100000110000;
+        20:0000100001000000;
+        21:0000000000011011;
+        22:1100100110100000;
+        23:1001000010000000;
+        24:1001000100000000;
+        25:0000100000000000;
+        26:0000000000010010;
+        27:0011110000000000;
+        28:0000000000000000;
+        29:0000000000000000;
+        [...]
+        65533:0000000000000000;
+        65534:0000000000000000;
+        65535:0000000000000000;
+        END;
+
+        ```
+    </TabItem>
+</Tabs>
+
+## Instalação
+O montador encontra-se disponível em duas versões, cujo código fonte pode ser baixado em um arquivo zip por meio dos seguintes links:
+- [`v1.0.0 stable`](https://github.com/de-abreu/Processador-ICMC/releases/download/v1.0.0/assembler-stable.zip)
+- [`v2.1.0 beta`]() (disponível apenas para Linux)

@@ -1,25 +1,18 @@
-endi:
-  name: Endilie Yacop Sucipto
-  title: Maintainer of Docusaurus
-  url: https://github.com/endiliey
-  image_url: https://github.com/endiliey.png
+abreu:
+  name: Guilherme de Abreu Barreto
+  title: Aluno do curso de Ciência da Computação
+  url: https://git.disroot.org/abreu
+  image_url: https://git.disroot.org/avatars/c84c3bacdc2a95c4575c5cfbb309f8da
+  email: de_abreu@usp.br
+  social:
+    github: de-abreu
 
-yangshun:
-  name: Yangshun Tay
-  title: Front End Engineer @ Facebook
-  url: https://github.com/yangshun
-  image_url: https://github.com/yangshun.png
-  socials:
-    x: yangshunz
-    github: yangshun
-
-slorber:
-  name: Sébastien Lorber
-  title: Docusaurus maintainer
-  url: https://sebastienlorber.com
-  image_url: https://github.com/slorber.png
-  socials:
-    x: sebastienlorber
-    linkedin: sebastienlorber
-    github: slorber
-    newsletter: https://thisweekinreact.com
+simoes:
+  name: Eduardo do Valle Simões
+  title: Professor Doutor pesquisador na área de Robótica Evolutiva e Inteligência Computacional
+  # url: https://gitlab.com/simoesusp
+  image_url: https://gitlab.com/uploads/-/system/user/avatar/4199271/avatar.png
+  email: simoes@icmc.usp.br
+  social:
+    github: simoesusp
+    gitlab: simoesusp

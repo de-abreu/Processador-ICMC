@@ -4,27 +4,48 @@
  * work well for content-centric websites.
  */
 
+/* ICMC's processor color pallete, for reference:
+* White      = #ffffff
+* Brown      = #a52a2a
+* Green      = #00ff00
+* Musk       = #6b8e23
+* ICMC Blue  = #23238e
+* Purple     = #871f78
+* Teal       = #008080
+* LightGray  = #dce8fa
+* Gray       = #bebebe
+* Red        = #ff0000
+* DarkGreen  = #32cd32
+* Yellow     = #ffff00
+* Blue       = #0000ff
+* Pink       = #ff1cae
+* LightGreen = #7adb93
+* Black      = #000000
+*
+* The primary color for light mode is ICMC Blue while for dark mode it is LightGreen.
+*/
+
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+    --ifm-color-primary: #23238e;
+    --ifm-color-primary-dark: #202080;
+    --ifm-color-primary-darker: #1e1e79;
+    --ifm-color-primary-darkest: #191963;
+    --ifm-color-primary-light: #27279c;
+    --ifm-color-primary-lighter: #2828a3;
+    --ifm-color-primary-lightest: #2e2eb9;
+    --ifm-code-font-size: 95%;
+    --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+    --ifm-color-primary: #7adb93;
+    --ifm-color-primary-dark: #5fd47d;
+    --ifm-color-primary-darker: #52d072;
+    --ifm-color-primary-darkest: #33bc56;
+    --ifm-color-primary-light: #95e2a9;
+    --ifm-color-primary-lighter: #a2e6b4;
+    --ifm-color-primary-lightest: #cbf1d4;
+    --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
