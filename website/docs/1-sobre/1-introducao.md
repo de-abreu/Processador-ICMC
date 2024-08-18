@@ -14,7 +14,7 @@ Este projeto é contempla os seguintes componentes:
 - Uma [biblioteca de referência](/docs/category/referencias), contendo funções comentadas e jogos completos.
 - Uma coletânea de guias auxiliares, com orientações práticas para o desenvolvimento de jogos.
 
-:::warning Do you want to know more?
+:::info Do you want to know more?
 
 <p align="center"><img title="Capa da revista Analog Computing" width="280px" src="https://upload.wikimedia.org/wikipedia/en/7/77/ANALOG_Computing_Issue_43_June_1986_Issue_Cover.jpg" /></p><br/>
 

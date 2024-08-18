@@ -1,5 +1,6 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import { Highlight } from '@site/src/components/Highlight'
 
 # Simulador
 
@@ -11,17 +12,61 @@ Este encontra-se disponível em duas versões:
 
 - **Browser:** pode ser utilizado diretamente em um navegador gráfico. Este foi testado nos navegadores Firefox e Chromium;
 
-
+:::info À saber
+Apenas o simulador original necessita ser instalado para ser utilizado, aquele browser está acessível no endereço https://thiagoambiel.github.io/SimuladorICMC/. Não obstante, abaixo está descrito o processo de instalação para ambas as versões, tal que possam ser utilizados localmente.
+:::
 ## Instalação
+
 
 <Tabs>
     <TabItem value="Original">
-    Baixe e descompacte o arquivo zip disponível no seguinte link.
+        ```bash
+        wget https://github.com/de-abreu/Processador-ICMC/raw/master/simulator/original_simulator.zip
+        unzip original_simulator.zip
+        cd original
+        gcc *.c -o sim
+        ```
+        Com isso você terá em mãos o executável `sim`. Leve-o ao diretório em que estiver trabalhando, conforme sua conveniência.
+
     </TabItem>
     <TabItem value="Browser">
+        :::warning
+        Assume-se pelo comando `open` que o browser a ser utilizado é aquele definido como sendo o padrão para o usuário em questão.
+        :::
+
+        ```bash
+        wget https://github.com/de-abreu/Processador-ICMC/raw/master/simulator/browser_simulator.zip
+        unzip browser_simulator.zip
+        open browser/index.html
+        ```
     </TabItem>
 </Tabs>
 
 
 ## Uso
-:::info Simuladores alternativos
+
+### Arquivos necessários à simulação
+Os simuladores necessitam de um par de arquivos `.mif` para operarem sobre: o primeiro referente ao jogo e o segundo ao [*charmap*](/docs/guides/charmaps) correspondente, respectivamente. Para o simulador original, estes podem ser repassados conforme o comando
+
+```bash
+./sim jogo.mif charmap.mif
+```
+
+Enquanto o simulador para browser, este, quando aberto, apresenta uma interface gráfica que propicia a navegação pelo gerenciador de arquivos para selecionar estes mesmos arquivos.
+
+### Descrição da interface gráfica
+
+Ambos os simuladores possuem interfaces semelhantes entre si, as quais devem figurar os seguintes dois componentes:
+
+![Jogo *Frogger Demake*, rodando no simulador original](/img/simulador.svg)
+- **<Highlight color="#26762b">Registradores</Highlight>** Ao topo estão descritos os valores armazenados nos registradores.
+- **<Highlight color="#64272b">Instruções</Highlight>** A atual instrução sendo lida (primeira linha) e as instruções seguintes armazenadas na memória.
+
+Para saber o que são e o que fazem os **registradores** descritos pelo simulador, consulte a seção referente a estes na página do [processador](/docs/components/processador).
+
+:::info Do you want to know more?
+A tempo de escrita deste documento, existem uma variedade de simuladores alternativos desenvolvido por alunos do ICMC. Dentre os quais:
+- [OpenGL_Simulator]
+- [goICMCsim](https://github.com/lucasgpulcinelli/goICMCsim) feito por Lucas Pulcinelli
+- [ICMC's CPU Emulator] por Vinicius Giroto
+:::

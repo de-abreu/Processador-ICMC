@@ -111,26 +111,7 @@ const config: Config = {
         },
         footer: {
             style: 'dark',
-            links: [
-                {
-                    title: 'Documentação',
-                    items: sections
-                },
-                {
-                    title: 'More',
-                    items: [
-                        {
-                            label: 'Blog',
-                            to: '/blog',
-                        },
-                        {
-                            label: 'GitHub',
-                            href: 'https://de-abreu.github.io/Processador-ICMC/',
-                        },
-                    ],
-                },
-            ],
-            copyright: `Copyright © ${new Date().getFullYear()} Eduardo do Valle Simões. Feito com Docusaurus.`,
+            copyright: `Copyright © ${new Date().getFullYear()} Eduardo do Valle Simões. Feito com Docusaurus. Iconografia por Icons8.`,
         },
         prism: {
             theme: prismThemes.oneLight,
