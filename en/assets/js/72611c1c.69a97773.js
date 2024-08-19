@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[3911],{159:s=>{s.exports=JSON.parse('{"tags":[{"label":"Inscri\xe7\xf5es","permalink":"/Processador-ICMC/en/blog/tags/inscricoes","description":"Planilhas listando projetos feitos por alunos e a data da apresenta\xe7\xe3o destes","count":1}]}')}}]);

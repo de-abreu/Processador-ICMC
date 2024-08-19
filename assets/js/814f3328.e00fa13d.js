@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[7472],{5513:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Projetos de jogos, turmas de 2025","permalink":"/Processador-ICMC/blog/projetos-2025","unlisted":false,"date":"2024-08-16T00:00:00.000Z"}]}')}}]);
