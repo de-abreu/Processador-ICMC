@@ -17,7 +17,7 @@ const sections = [
     },
     {
         label: 'Referências',
-        to: '/docs/category/referencias',
+        to: '/docs/category/biblioteca',
     },
     {
         label: 'Guias',

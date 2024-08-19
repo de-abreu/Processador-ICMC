@@ -40,7 +40,7 @@ Consulte os **jogos recomendados** na [biblioteca de jogos](/docs/biblioteca/jog
 
 
 :::warning
-Senão pela [biblioteca de referência](/docs/category/biblioteca), que deve ser usada mediante consulta, recomenda-se aos alunos ler e resenhar para própria referência a **toda** esta documentação **antes** de iniciar seu projeto. Isto, pois
+Senão pelas [bibliotecas de referência](/docs/category/biblioteca), que são bastante extensas, recomenda-se aos alunos ler e resenhar para própria referência a **toda** esta documentação **antes** de iniciar seu projeto. Isto, pois
 
 - este trata-se de um projeto único, não se encontrará noutro lugar da internet mais informações sobre este; ou mesmo informações específicas utilizando-se de um buscador.
 - a documentação foi escrita largamente por outros alunos, os quais enfrentaram o mesmos percalços que vocês enfrentarão, e certamente gostariam de ter lido esta afim de poupar trabalho, e mesmo evitar retrabalho.

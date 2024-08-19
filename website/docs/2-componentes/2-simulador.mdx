@@ -46,7 +46,7 @@ Apenas o simulador original necessita ser instalado para ser utilizado, aquele b
 ## Uso
 
 ### Arquivos necessários à simulação
-Os simuladores necessitam de um par de arquivos `.mif` para operarem sobre: o primeiro referente ao jogo e o segundo ao [*charmap*](/docs/guides/charmaps) correspondente, respectivamente. Para o simulador original, estes podem ser repassados conforme o comando
+Os simuladores necessitam de um par de arquivos `.mif` para operarem sobre: o primeiro referente ao jogo － e gerado pelo [montador](/docs/componentes/montador) － e o segundo ao [charmap](/docs/guias/charmaps) correspondente, respectivamente. Para o simulador original, estes podem ser repassados conforme o comando
 
 ```bash
 ./sim jogo.mif charmap.mif
@@ -62,11 +62,11 @@ Ambos os simuladores possuem interfaces semelhantes entre si, as quais devem fig
 - **<Highlight color="#26762b">Registradores</Highlight>** Ao topo estão descritos os valores armazenados nos registradores.
 - **<Highlight color="#64272b">Instruções</Highlight>** A atual instrução sendo lida (primeira linha) e as instruções seguintes armazenadas na memória.
 
-Para saber o que são e o que fazem os **registradores** descritos pelo simulador, consulte a seção referente a estes na página do [processador](/docs/components/processador).
+Para saber o que são e o que fazem os **registradores** descritos pelo simulador, consulte a seção referente a estes na página do [processador](/docs/componentes/processador).
 
 :::info Do you want to know more?
 A tempo de escrita deste documento, existem uma variedade de simuladores alternativos desenvolvido por alunos do ICMC. Dentre os quais:
-- [OpenGL_Simulator]
-- [goICMCsim](https://github.com/lucasgpulcinelli/goICMCsim) feito por Lucas Pulcinelli
-- [ICMC's CPU Emulator] por Vinicius Giroto
+- [OpenGL_Simulator](https://github.com/de-abreu/Processador-ICMC/blob/master/simulator/opengl/README.md) por Breno Queiroz e Maria Eduarda Moreira;
+- [goICMCsim](https://github.com/lucasgpulcinelli/goICMCsim) por Lucas Pulcinelli;
+- [ICMC's CPU Emulator](https://proc.giroto.dev/) por Vinicius Giroto － este trata-se de uma IDE que contém seu próprio simulador.
 :::
