@@ -1,0 +1,46 @@
+{
+    "version.label": {
+        "message": "Next",
+        "description": "The label for version current"
+    },
+    "sidebar.tutorialSidebar.category.Sobre": {
+        "message": "About",
+        "description": "The label for category Sobre in sidebar tutorialSidebar"
+    },
+    "sidebar.tutorialSidebar.category.Sobre.link.generated-index.description": {
+        "message": "Project presentation, for teachers and students.",
+        "description": "The generated-index page description for category Sobre in sidebar tutorialSidebar"
+    },
+    "sidebar.tutorialSidebar.category.Componentes": {
+        "message": "Components",
+        "description": "The label for category Componentes in sidebar tutorialSidebar"
+    },
+    "sidebar.tutorialSidebar.category.Componentes.link.generated-index.description": {
+        "message": "Installation and usage instructions for the main components of this project.",
+        "description": "The generated-index page description for category Componentes in sidebar tutorialSidebar"
+    },
+    "sidebar.tutorialSidebar.category.Linguagem Assembly": {
+        "message": "Assembly language",
+        "description": "The label for category Linguagem Assembly in sidebar tutorialSidebar"
+    },
+    "sidebar.tutorialSidebar.category.Linguagem Assembly.link.generated-index.description": {
+        "message": "Specification of the language and list of implemented instructions for the ICMC Processor",
+        "description": "The generated-index page description for category Linguagem Assembly in sidebar tutorialSidebar"
+    },
+    "sidebar.tutorialSidebar.category.Biblioteca": {
+        "message": "Library",
+        "description": "The label for category Biblioteca in sidebar tutorialSidebar"
+    },
+    "sidebar.tutorialSidebar.category.Biblioteca.link.generated-index.description": {
+        "message": "Lists of reference materials.",
+        "description": "The generated-index page description for category Biblioteca in sidebar tutorialSidebar"
+    },
+    "sidebar.tutorialSidebar.category.Guias": {
+        "message": "How-to guides",
+        "description": "The label for category Guias in sidebar tutorialSidebar"
+    },
+    "sidebar.tutorialSidebar.category.Guias.link.generated-index.description": {
+        "message": "Auxiliary guides on various topics related to the project's objectives.",
+        "description": "The generated-index page description for category Guias in sidebar tutorialSidebar"
+    }
+}

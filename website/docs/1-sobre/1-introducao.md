@@ -1,3 +1,7 @@
+---
+title: Introdução
+description: O que é, e qual a finalidade, do Processador ICMC
+---
 # Introdução
 
 O Processador ICMC trata-se de um projeto iniciado pelo [Prof. Dr. Eduardo do Valle Simões](http://lattes.cnpq.br/4055872056358293) para lecionar de forma principalmente prática, Organização e Arquitetura de Computadores aos alunos do [Instituto de Ciências Matemáticas e Computacionais (ICMC)](https://icmc.usp.br/institucional/quem-somos) da Universidade de São Paulo.
@@ -11,7 +15,7 @@ Este projeto é contempla os seguintes componentes:
 - O [software do montador](/docs/componentes/simulador), que lê a linguagem de montagem e gera o código binário necessário a sua execução;
 - O [software do simulador](/docs/componentes/simulador), para simular o funcionamento do programa antes de submetê-lo ao (relativamente mais lento) processo de escrita na memória da placa;
 - Uma [IDE](/docs/componentes/IDE) configurada para programação na linguagem de montagem do projeto e integração com o simulador do mesmo.
-- Uma [biblioteca de referência](/docs/category/biblioteca), contendo funções comentadas e jogos completos.
+- Uma [biblioteca de referência](/docs/category/biblioteca), contendo aulas gravadas, funções comentadas e jogos completos.
 - Uma coletânea de [guias auxiliares](/docs/category/guias), com orientações práticas para o desenvolvimento de jogos.
 
 :::info Do you want to know more?

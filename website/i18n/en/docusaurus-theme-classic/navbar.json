@@ -1,0 +1,38 @@
+{
+    "title": {
+        "message": "ICMC's Processor",
+        "description": "The title in the navbar"
+    },
+    "logo.alt": {
+        "message": "ICMC",
+        "description": "Logo of the ICMC's Processor"
+    },
+    "item.label.Sobre": {
+        "message": "About",
+        "description": "Navbar item with label \"About\""
+    },
+    "item.label.Componentes": {
+        "message": "Components",
+        "description": "Navbar item with label \"Components\""
+    },
+    "item.label.Linguagem Assembly": {
+        "message": "Assembly language",
+        "description": "Navbar item with label \"Assembly language\""
+    },
+    "item.label.Biblioteca": {
+        "message": "Library",
+        "description": "Navbar item with label \"Library\""
+    },
+    "item.label.Guias": {
+        "message": "How-to guides",
+        "description": "Navbar item with label \"How-to guides\""
+    },
+    "item.label.Blog": {
+        "message": "Blog",
+        "description": "Navbar item with label \"Blog\""
+    },
+    "item.label.GitHub": {
+        "message": "GitHub",
+        "description": "Navbar item with label \"GitHub\""
+    }
+}

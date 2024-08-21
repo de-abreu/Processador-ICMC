@@ -1,54 +1,60 @@
-import clsx from 'clsx';
 import Heading from '@theme/Heading';
+import Translate from '@docusaurus/Translate';
+import clsx from 'clsx';
 import styles from './styles.module.css';
 
 type FeatureItem = {
-    title: string;
+    title: JSX.Element;
     Svg: React.ComponentType<React.ComponentProps<'svg'>>;
     description: JSX.Element;
+    link: string;
 };
 
 const FeatureList: FeatureItem[] = [
     {
-        // TODO: Insert link to the Assembly language documentation
-        title: 'Fácil aprendizado',
+        title: (<><Translate>Fácil aprendizado</Translate></>),
         Svg: require('@site/static/img/icons8-code.svg').default,
         description: (
             <>
-                Linguagem Assembly de uso didático, extensivamente documentada e com exemplos de uso.
+                <Translate>
+                    Linguagem Assembly de uso didático, extensivamente documentada e com exemplos de uso.
+                </Translate>
             </>
         ),
+        link: '/docs/category/linguagem-assembly'
     },
     {
-        // TODO: Insert link to the Setup documentation
-        title: 'Prototipável',
+        title: (<><Translate>Prototipável</Translate></>),
         Svg: require('@site/static/img/icons8-chip.svg').default,
         description: (
             <>
-                Projetado e testado para uso em placas Intel FPGA, dispondo de uma variedade de simuladores.
+                <Translate>Projetado e testado para uso em placas Intel FPGA, dispondo de uma variedade de simuladores.</Translate>
             </>
         ),
+        link: '/docs/category/componentes'
     },
     {
-        // TODO: Insert link to the game library page
-        title: 'Biblioteca de jogos',
+        title: (<><Translate>Biblioteca de jogos</Translate></>),
         Svg: require('@site/static/img/icons8-games-folder.svg').default,
         description: (
             <>
-                Jogos e respectivos códigos-fonte disponíveis para consulta.
+                <Translate>Jogos e respectivos códigos-fonte disponíveis para consulta.</Translate>
             </>
         ),
+        link: '/docs/biblioteca/jogos'
     },
 ];
 
-function Feature({ title, Svg, description }: FeatureItem) {
+function Feature({ title, Svg, description, link }: FeatureItem) {
     return (
         <div className={clsx('col col--4')}>
             <div className="text--center">
                 <Svg className={styles.featureSvg} role="img" />
             </div>
             <div className="text--center padding-horiz--md">
-                <Heading as="h3">{title}</Heading>
+                <a href={link}>
+                    <Heading as="h3">{title}</Heading>
+                </a>
                 <p>{description}</p>
             </div>
         </div>

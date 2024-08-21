@@ -2,32 +2,9 @@ import { themes as prismThemes } from 'prism-react-renderer';
 import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
-const sections = [
-    {
-        label: 'Sobre',
-        to: '/docs/category/sobre',
-    },
-    {
-        label: 'Componentes',
-        to: '/docs/category/componentes',
-    },
-    {
-        label: 'Linguagem Assembly',
-        to: '/docs/category/linguagem-assembly',
-    },
-    {
-        label: 'Referências',
-        to: '/docs/category/biblioteca',
-    },
-    {
-        label: 'Guias',
-        to: '/docs/category/guias',
-    },
-]
-
 const config: Config = {
     title: 'Processador ICMC',
-    tagline: 'Ensino de arquitetura de computadores por meio do desenvolvimento de jogos',
+    tagline: 'Ensino de organização e arquitetura de computadores por meio do desenvolvimento de jogos',
     favicon: 'img/favicon.ico',
 
     // Set the production url of your site here
@@ -59,10 +36,6 @@ const config: Config = {
             {
                 docs: {
                     sidebarPath: './sidebars.ts',
-                    // Please change this to your repo.
-                    // Remove this to remove the "edit this page" links.
-                    editUrl:
-                        'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
                 },
                 blog: {
                     showReadingTime: true,
@@ -70,10 +43,6 @@ const config: Config = {
                         type: ['rss', 'atom'],
                         xslt: true,
                     },
-                    // Please change this to your repo.
-                    // Remove this to remove the "edit this page" links.
-                    editUrl:
-                        'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
                 },
                 theme: {
                     customCss: './src/css/custom.css',
@@ -92,7 +61,26 @@ const config: Config = {
                 src: 'img/logo.png',
             },
             items: [
-                ...sections,
+                {
+                    label: 'Sobre',
+                    to: '/docs/category/sobre',
+                },
+                {
+                    label: 'Componentes',
+                    to: '/docs/category/componentes',
+                },
+                {
+                    label: 'Linguagem Assembly',
+                    to: '/docs/category/linguagem-assembly',
+                },
+                {
+                    label: 'Biblioteca',
+                    to: '/docs/category/biblioteca',
+                },
+                {
+                    label: 'Guias',
+                    to: '/docs/category/guias',
+                },
                 {
                     label: 'Blog',
                     to: '/blog',
@@ -117,7 +105,7 @@ const config: Config = {
             theme: prismThemes.oneLight,
             darkTheme: prismThemes.oneDark,
             additionalLanguages: ['bash', 'asmatmel'],
-        },
+        }
     } satisfies Preset.ThemeConfig,
 };
 

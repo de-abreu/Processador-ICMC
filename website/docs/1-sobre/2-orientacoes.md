@@ -1,6 +1,22 @@
-# Orientações aos alunos
-> Aos matriculados na disciplina "*Prática em Organização e Arquitetura de Computadores*" (SSC0119)
-## Avaliação
+---
+title: Como usar esta documentação
+description: Orientações gerais aos alunos e demais interessados pelo projeto
+---
+# Como usar esta documentação
+Àqueles que pretendem experimentar a criação de jogos ou quaisquer outros programas utilizando, ou construindo sobre, o projeto do Processador ICMC, esta documentação se pretende apresentar a todo o conhecimento e ferramental disponível para iniciar-se.
+
+Para tal, faz-se necessário apenas:
+1. A instalação dos [programas componentes](/docs/category/componentes) deste projeto, assim como a leitura das suas instruções de uso.
+2. A leitura das especificações da [linguagem assembly](/docs/category/linguagem-assembly) utilizada pelo projeto.
+
+Não obstante, recomenda-se também a consulta aos [guias](/docs/category/guias) e a [biblioteca de referências](/docs/category/biblioteca), afim de obter alguns exemplos práticos e evitar alguns percalços.
+
+### Para expandir esta documentação
+
+## Orientações específicas aos alunos
+
+> Estes matriculados na disciplina "*Prática em Organização e Arquitetura de Computadores*" (SSC0119)
+### Avaliação
 
 Os alunos deverão organizar-se em duplas ou trios e, ao final do semestre, *ter desenvolvido, publicado e apresentado um jogo implementado em uma placa FPGA*. Cada integrante de cada grupo será avaliado **individualmente**, conforme atestada sua contribuição ao projeto na respectiva apresentação final.
 
@@ -18,7 +34,7 @@ São os **critérios de avaliação** do projeto:
 2. Cada integrante do grupo **deve estar presente** nesta apresentação final, ainda que remotamente com o uso de ferramentas de video-conferência, como o [Jitsi](https://jitsi.org/).
 :::
 
-## Etapas de desenvolvimento do projeto
+### Etapas de desenvolvimento do projeto
 
 1. Criação do repositório git para armazenamento do projeto.
 2. [Implementação das instruções de máquina](/docs/guias/criando-instrucoes) para manipulação do processador.
@@ -26,25 +42,18 @@ São os **critérios de avaliação** do projeto:
 4. [Implementação do jogo na placa FPGA](/docs/guias/ajustes-finais) e subsequente apresentação.
 5. Atualização do repositório git e opcional [atualização da documentação](/docs/guias/documentacao) associada ao projeto do processador.
 
-## Requisitos para o repositório Git do projeto
+:::tip
+Antes de propor-se a criar seu jogo, consulte os **jogos recomendados** na [biblioteca de jogos](/docs/biblioteca/jogos). Atente-se a forma com que estes foram documentados, realize o download de seus arquivos e tente [simulá-los](/docs/componentes/simulador), para se ter uma ideia das capacidades do processador ICMC.
+:::
+
+
+### Requisitos para o repositório Git do projeto
 Constar os nomes de **todos** os autores do projeto e respectivos números USP, e conter:
     1. O arquivo `cpu.vhd` contendo a descrição em linguagem VHDL da CPU;
     2. Os arquivos `.asm` e `.mif` referentes ao programa do jogo;
     3. O arquivo `.mif` para o charmap utilizado pelo jogo;
     4. Quaisquer outros arquivos relevantes a execução do jogo, especialmente quando este realiza modificações sobre o projeto do Processador ICMC.
     5. Todas as instruções necessárias a execução do jogo por terceiros, mesmo que isso seja meramente apontar para as porções relevantes da documentação do Processador ICMC
-
-:::tip
-Consulte os **jogos recomendados** na [biblioteca de jogos](/docs/biblioteca/jogos) se quiser ter exemplos de repositórios git bem organizados e redigidos.
-:::
-
-
-:::warning
-Senão pela [biblioteca de referência](/docs/category/biblioteca), que deve ser usada mediante consulta, recomenda-se aos alunos ler e resenhar para própria referência a **toda** esta documentação **antes** de iniciar seu projeto. Isto, pois
-
-- este trata-se de um projeto único, não se encontrará noutro lugar da internet mais informações sobre este; ou mesmo informações específicas utilizando-se de um buscador.
-- a documentação foi escrita largamente por outros alunos, os quais enfrentaram o mesmos percalços que vocês enfrentarão, e certamente gostariam de ter lido esta afim de poupar trabalho, e mesmo evitar retrabalho.
-:::
 
 :::note TODO
 Elaborar sobre os critérios de avaliação conforme julgar necessário. Por exemplo, acrescentando pesos aos diferentes requisitos.
