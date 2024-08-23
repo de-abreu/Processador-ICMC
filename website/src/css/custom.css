@@ -49,3 +49,7 @@
     --ifm-color-primary-lightest: #cbf1d4;
     --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+.keep-together {
+    display: inline-block;
+}

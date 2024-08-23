@@ -14,7 +14,6 @@ const config: Config = {
     baseUrl: '/Processador-ICMC/',
 
     // GitHub pages deployment config.
-    // If you aren't using GitHub pages, you don't need these.
     organizationName: 'de-abreu', // Usually your GitHub org/user name.
     projectName: 'Processador-ICMC', // Usually your repo name.
     trailingSlash: false,
@@ -22,9 +21,6 @@ const config: Config = {
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
 
-    // Even if you don't use internationalization, you can use this field to set
-    // useful metadata like html lang. For example, if your site is Chinese, you
-    // may want to replace "en" with "zh-Hans".
     i18n: {
         defaultLocale: 'pt-br',
         locales: ['pt-br', 'en'],
@@ -36,6 +32,7 @@ const config: Config = {
             {
                 docs: {
                     sidebarPath: './sidebars.ts',
+                    editUrl: 'https://github.com/de-abreu/Processador-ICMC/tree/master/website/'
                 },
                 blog: {
                     showReadingTime: true,
@@ -105,6 +102,18 @@ const config: Config = {
             theme: prismThemes.oneLight,
             darkTheme: prismThemes.oneDark,
             additionalLanguages: ['bash', 'asmatmel'],
+        },
+        themes: [
+            'docusaurus-theme-github-codeblock'
+        ],
+
+        themeConfig: {
+            codeblock: {
+                showGithubLink: true,
+                githubLinkLabel: 'View on GitHub',
+                showRunmeLink: false,
+                runmeLinkLabel: 'Checkout via Runme'
+            },
         }
     } satisfies Preset.ThemeConfig,
 };

@@ -1,7 +1,5 @@
-# IDE
+---
+title: 'IDE'
+description: 'O ambiente de desenvolvimento integrado (Integrated Desktop Environment)'
+---
 
-O ambiente de desenvolvimento integrado (Integrated Desktop Environment)
-
-:::info TODO
-Escrever este artigo
-:::

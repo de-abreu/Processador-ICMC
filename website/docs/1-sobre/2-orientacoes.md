@@ -11,7 +11,10 @@ Para tal, faz-se necessário apenas:
 
 Não obstante, recomenda-se também a consulta aos [guias](/docs/category/guias) e a [biblioteca de referências](/docs/category/biblioteca), afim de obter alguns exemplos práticos e evitar alguns percalços.
 
-### Para expandir esta documentação
+## Para expandir esta documentação
+Esta documentação foi criada fazendo uso das ferramentas [Docusaurus](https://docusaurus.io/) e [GitHub Pages](https://pages.github.com/). Ao final de cada página encontra-se um link "**Editar esta página**" onde o usuário pode, em uma sequência de passos, realizar o envio de alterações propostas na forma de [*Pull Requests*](https://docs.github.com/pt/pull-requests). Todas as páginas desta documentação são escritas e formatadas usando a linguagem de marcação [markdown](https://www.markdownguide.org), um guia completo para a sintaxe desta pode ser encontrado [aqui](https://www.markdownguide.org/basic-syntax/).
+
+Não obstante, ao realizar um [fork](https://docs.github.com/pt/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) no [repositório](https://github.com/de-abreu/Processador-ICMC) do projeto, muitas outras alterações da documentação, mesmo estruturais, podem ser propostas. Para tal, recomenda-se a leitura da documentação do Docusaurus, em especial seu [tutorial](https://docusaurus.io/docs#fast-track).
 
 ## Orientações específicas aos alunos
 
@@ -42,11 +45,6 @@ São os **critérios de avaliação** do projeto:
 4. [Implementação do jogo na placa FPGA](/docs/guias/ajustes-finais) e subsequente apresentação.
 5. Atualização do repositório git e opcional [atualização da documentação](/docs/guias/documentacao) associada ao projeto do processador.
 
-:::tip
-Antes de propor-se a criar seu jogo, consulte os **jogos recomendados** na [biblioteca de jogos](/docs/biblioteca/jogos). Atente-se a forma com que estes foram documentados, realize o download de seus arquivos e tente [simulá-los](/docs/componentes/simulador), para se ter uma ideia das capacidades do processador ICMC.
-:::
-
-
 ### Requisitos para o repositório Git do projeto
 Constar os nomes de **todos** os autores do projeto e respectivos números USP, e conter:
     1. O arquivo `cpu.vhd` contendo a descrição em linguagem VHDL da CPU;
@@ -55,6 +53,9 @@ Constar os nomes de **todos** os autores do projeto e respectivos números USP, 
     4. Quaisquer outros arquivos relevantes a execução do jogo, especialmente quando este realiza modificações sobre o projeto do Processador ICMC.
     5. Todas as instruções necessárias a execução do jogo por terceiros, mesmo que isso seja meramente apontar para as porções relevantes da documentação do Processador ICMC
 
+:::tip
+Antes de propor-se a criar seu jogo, consulte os **jogos recomendados** na [biblioteca de jogos](/docs/biblioteca/jogos). Atente-se a forma com que estes foram documentados, realize o download de seus arquivos e tente [simulá-los](/docs/componentes/simulador), para se ter uma ideia das capacidades do processador ICMC.
+:::
 :::note TODO
 Elaborar sobre os critérios de avaliação conforme julgar necessário. Por exemplo, acrescentando pesos aos diferentes requisitos.
 :::
