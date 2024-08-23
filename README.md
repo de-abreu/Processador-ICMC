@@ -2,7 +2,7 @@
 
 <img align="left" width="0" height="192px" hspace="10"/>
 
-#### Processador ICMC
+### Processador ICMC
 
 [![GPL3](https://img.shields.io/badge/License-GPL3.0-blue)](/LICENSE)
 
@@ -10,6 +10,8 @@ Ensino de organização e arquitetura de computadores por meio do desenvolviment
 
 *Also in&nbsp;
 <a href="i18n/README_en.md">🇺🇸</a>*
+
+<br/>
 
 # Disciplina SSC0119 Prática em Organização de Computadores
 - Por Favor, para as aulas e informações da Disciplina SSC0119 Prática em Organização de Computadores, usar a página da Disciplina em: https://gitlab.com/simoesusp/disciplinas/-/tree/master/SSC0119-Pratica-em-Organizacao-de-Computadores
