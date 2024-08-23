@@ -1,61 +1,69 @@
 ---
-title: Como usar esta documentação
-description: Orientações gerais aos alunos e demais interessados pelo projeto
+title: How to use this documentation
+description: General guidelines for students and others interested in the project
 ---
-# Como usar esta documentação
-Àqueles que pretendem experimentar a criação de jogos ou quaisquer outros programas utilizando, ou construindo sobre, o projeto do Processador ICMC, esta documentação se pretende apresentar a todo o conhecimento e ferramental disponível para iniciar-se.
+# How to use this documentation
+For those who intend to experiment with the creation of games or any other programs using, or building upon, the ICMC Processor project, this documentation aims to present all the knowledge and tools available to get started.
 
-Para tal, faz-se necessário apenas:
-1. A instalação dos [programas componentes](/docs/category/componentes) deste projeto, assim como a leitura das suas instruções de uso.
-2. A leitura das especificações da [linguagem assembly](/docs/category/linguagem-assembly) utilizada pelo projeto.
+To do so, it is only necessary:
+1. The installation of the [component programs](/docs/category/componentes) of this project, as well as reading their usage instructions.
+2. Reading the specifications of the [assembly language](/docs/category/linguagem-assembly) used by the project.
 
-Não obstante, recomenda-se também a consulta aos [guias](/docs/category/guias) e a [biblioteca de referências](/docs/category/biblioteca), afim de obter alguns exemplos práticos e evitar alguns percalços.
+Nevertheless, it is also recommended to consult the [guides](/docs/category/guias) and the [reference library](/docs/category/biblioteca) to obtain some practical examples and avoid some pitfalls.
 
-## Para expandir esta documentação
-Esta documentação foi criada fazendo uso das ferramentas [Docusaurus](https://docusaurus.io/) e [GitHub Pages](https://pages.github.com/). Ao final de cada página encontra-se um link "**Editar esta página**" onde o usuário pode, em uma sequência de passos, realizar o envio de alterações propostas na forma de [*Pull Requests*](https://docs.github.com/pt/pull-requests). Todas as páginas desta documentação são escritas e formatadas usando a linguagem de marcação [markdown](https://www.markdownguide.org), um guia completo para a sintaxe desta pode ser encontrado [aqui](https://www.markdownguide.org/basic-syntax/).
+## To expand this documentation
+This documentation was created using the tools [Docusaurus](https://docusaurus.io/) and [GitHub Pages](https://pages.github.com/). At the end of each page, there is a link "**Edit this page**" where the user can, in a sequence of steps, submit proposed changes in the form of [*Pull Requests*](https://docs.github.com/pt/pull-requests). All pages of this documentation are written and formatted using the markup language [markdown](https://www.markdownguide.org), a complete guide to its syntax can be found [here](https://www.markdownguide.org/basic-syntax/).
 
-Não obstante, ao realizar um [fork](https://docs.github.com/pt/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) no [repositório](https://github.com/de-abreu/Processador-ICMC) do projeto, muitas outras alterações da documentação, mesmo estruturais, podem ser propostas. Para tal, recomenda-se a leitura da documentação do Docusaurus, em especial seu [tutorial](https://docusaurus.io/docs#fast-track).
+Nevertheless, by performing a [fork](https://docs.github.com/pt/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) in the [repository](https://github.com/de-abreu/Processador-ICMC) of the project, many other changes to the documentation, even structural ones, can be proposed. For this, it is recommended to read the Docusaurus documentation, especially its [tutorial](https://docusaurus.io/docs#fast-track).
 
-## Orientações específicas aos alunos
+## Specific guidelines for students
 
-> Estes matriculados na disciplina "*Prática em Organização e Arquitetura de Computadores*" (SSC0119)
-### Avaliação
+> Those enrolled in the course "*Practice in Computer Organization and Architecture*" (SSC0119)
+### Evaluation
 
-Os alunos deverão organizar-se em duplas ou trios e, ao final do semestre, *ter desenvolvido, publicado e apresentado um jogo implementado em uma placa FPGA*. Cada integrante de cada grupo será avaliado **individualmente**, conforme atestada sua contribuição ao projeto na respectiva apresentação final.
+Students must organize themselves into pairs or trios and, by the end of the semester, *have developed, published, and presented a game implemented on an FPGA board*. Each member of each group will be evaluated **individually**, according to their contribution to the project in the respective final presentation.
 
-A cada semestre, [uma publicação referente a atual turma](/blog/tags/inscricoes) será acrescentada ao blog com links e instruções para os alunos inscreverem seus projetos.
+Each semester, [a publication related to the current class](/blog/tags/inscricoes) will be added to the blog with links and instructions for students to register their projects.
 
-São os **critérios de avaliação** do projeto:
+The **evaluation criteria** for the project are:
 
-1. **Implementação das instruções de máquina**: se as [instruções básicas](/docs/linguagem-assembly/instrucoes) foram implementadas e, se sim, foram estendidas.
-2. **Funcionalidade do jogo apresentado**: se este é funcional e, se sim, exibe múltiplas ou elaboradas funcionalidades.
-3. **Documentação do projeto**: se esta cumpre com os [requisitos](#requisitos-para-o-repositório-git-do-projeto) e, se sim, é clara e concisa.
-4. **Contribuições com o projeto do Processador ICMC**: Se foram feitas e aprovadas [Pull Requests](https://github.com/de-abreu/Processador-ICMC/pulls) ao repositório deste projeto.
+1. **Implementation of machine instructions**: whether the [basic instructions](/docs/linguagem-assembly/instrucoes) were implemented and, if so, were extended.
+2. **Functionality of the presented game**: whether it is functional and, if so, exhibits multiple or elaborate functionalities.
+3. **Project documentation**: whether it meets the [requirements](#requirements-for-the-project-git-repository) and, if so, is clear and concise.
+4. **Contributions to the ICMC Processor project**: If [Pull Requests](https://github.com/de-abreu/Processador-ICMC/pulls) were made and approved to the repository of this project.
 
-:::danger Requisitos obrigatórios para obter nota
-1. A inscrição do projeto e o agendamento da apresentação **deve ser realizado** conforme as exigências descritas na publicação no blog.
-2. Cada integrante do grupo **deve estar presente** nesta apresentação final, ainda que remotamente com o uso de ferramentas de video-conferência, como o [Jitsi](https://jitsi.org/).
+:::danger Mandatory requirements to earn a grade
+1. The project registration and the scheduling of the presentation **must be done** according to the requirements described in the blog post.
+2. Each member of the group **must be present** at this final presentation, even if remotely using video conferencing tools, such as [Jitsi](https://jitsi.org/).
 :::
 
-### Etapas de desenvolvimento do projeto
+## Project development stages
 
-1. Criação do repositório git para armazenamento do projeto.
-2. [Implementação das instruções de máquina](/docs/guias/criando-instrucoes) para manipulação do processador.
-3. Criação do jogo e [realização de testes](/docs/guias/debugging) deste.
-4. [Implementação do jogo na placa FPGA](/docs/guias/ajustes-finais) e subsequente apresentação.
-5. Atualização do repositório git e opcional [atualização da documentação](/docs/guias/documentacao) associada ao projeto do processador.
+1. Creation of the git repository for project storage.
+2. [Implementation of machine instructions](/docs/guias/criando-instrucoes) for processor manipulation.
+3. Creation of the game and [testing](/docs/guias/debugging) of it.
+4. [Implementation of the game on the FPGA board](/docs/guias/ajustes-finais) and subsequent presentation.
+5. Update of the git repository and optional [update of the documentation](/docs/guias/documentacao) associated with the processor project.
 
-### Requisitos para o repositório Git do projeto
-Constar os nomes de **todos** os autores do projeto e respectivos números USP, e conter:
-    1. O arquivo `cpu.vhd` contendo a descrição em linguagem VHDL da CPU;
-    2. Os arquivos `.asm` e `.mif` referentes ao programa do jogo;
-    3. O arquivo `.mif` para o charmap utilizado pelo jogo;
-    4. Quaisquer outros arquivos relevantes a execução do jogo, especialmente quando este realiza modificações sobre o projeto do Processador ICMC.
-    5. Todas as instruções necessárias a execução do jogo por terceiros, mesmo que isso seja meramente apontar para as porções relevantes da documentação do Processador ICMC
+## Requirements for the project's Git repository
+Include the names of **all** project authors and their respective USP numbers, and contain:
+    1. The `cpu.vhd` file containing the VHDL description of the CPU;
+    2. The `.asm` and `.mif` files related to the game program;
+    3. The `.mif` file for the charmap used by the game;
+    4. Any other files relevant to the execution of the game, especially when it makes modifications to the ICMC Processor project.
+    5. All instructions necessary for third parties to execute the game, even if it is merely pointing to the relevant portions of the ICMC Processor documentation.
 
 :::tip
-Antes de propor-se a criar seu jogo, consulte os **jogos recomendados** na [biblioteca de jogos](/docs/biblioteca/jogos). Atente-se a forma com que estes foram documentados, realize o download de seus arquivos e tente [simulá-los](/docs/componentes/simulador), para se ter uma ideia das capacidades do processador ICMC.
+Consult the **recommended games** in the [game library](/docs/biblioteca/jogos) if you want examples of well-organized and written git repositories.
 :::
+
+:::warning
+Except for the [reference libraries](/docs/category/biblioteca), which are quite extensive, it is recommended that students read and summarize **all** of this documentation **before** starting their project. This is because:
+
+- This is a unique project, and you will not find more information about it elsewhere on the internet or even specific information using a search engine.
+- The documentation was largely written by other students who faced the same challenges that you will face, and they certainly would have liked to read this to save work and even avoid rework.
+:::
+
 :::note TODO
-Elaborar sobre os critérios de avaliação conforme julgar necessário. Por exemplo, acrescentando pesos aos diferentes requisitos.
+Elaborate on the evaluation criteria as needed. For example, by adding weights to the different requirements.
 :::

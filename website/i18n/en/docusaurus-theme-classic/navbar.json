@@ -1,38 +1,38 @@
 {
     "title": {
-        "message": "ICMC's Processor",
+        "message": "ICMC Processor",
         "description": "The title in the navbar"
     },
     "logo.alt": {
         "message": "ICMC",
-        "description": "Logo of the ICMC's Processor"
+        "description": "The alt text of navbar logo"
     },
     "item.label.Sobre": {
         "message": "About",
-        "description": "Navbar item with label \"About\""
+        "description": "Navbar item with label Sobre"
     },
     "item.label.Componentes": {
         "message": "Components",
-        "description": "Navbar item with label \"Components\""
+        "description": "Navbar item with label Componentes"
     },
     "item.label.Linguagem Assembly": {
         "message": "Assembly language",
-        "description": "Navbar item with label \"Assembly language\""
+        "description": "Navbar item with label Linguagem Assembly"
     },
     "item.label.Biblioteca": {
         "message": "Library",
-        "description": "Navbar item with label \"Library\""
+        "description": "Navbar item with label Biblioteca"
     },
     "item.label.Guias": {
         "message": "How-to guides",
-        "description": "Navbar item with label \"How-to guides\""
+        "description": "Navbar item with label Guias"
     },
     "item.label.Blog": {
         "message": "Blog",
-        "description": "Navbar item with label \"Blog\""
+        "description": "Navbar item with label Blog"
     },
     "item.label.GitHub": {
         "message": "GitHub",
-        "description": "Navbar item with label \"GitHub\""
+        "description": "Navbar item with label GitHub"
     }
 }

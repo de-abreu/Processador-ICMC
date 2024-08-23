@@ -1,0 +1,221 @@
+---
+title: 'Coletânea de funções'
+description: 'Exemplos de funções para execução de diversas finalidades'
+---
+
+import DynamicSection from '@site/src/components/DynamicSection'
+
+# Coletânea de funções
+<DynamicSection>
+
+## Operacionais
+
+<details><summary>
+
+### saveRegisters
+Salva o contexto dos registradores para posterior recuperação, e carrega o valor dos argumentos nestes. A ser utilizado no inicio de demais funções.
+
+</summary>
+
+#### Argumentos
+Nenhum
+#### Retorna
+Nada
+
+```asmatmel
+saveRegisters:
+    pop r0         ; Armazena o endereço de retorno da função
+    push r1
+    push r2
+    push r3
+    push r4
+    push r5
+    push r6
+    push r7
+    push r0        ; Coloca-o de volta no topo da pilha
+    load r1, Arg1
+    load r2, Arg2
+    load r3, Arg3
+    load r4, Arg4
+    load r5, Arg5
+    load r6, Arg6
+    load r7, Arg7
+    loadn r0, #0
+    rts            ; Desempilha e retorna.
+```
+</details>
+
+<details><summary>
+
+### restoreRegisters
+Recupera o contexto dos registradores à partir da pilha. A ser utilizado ao término das funções.
+</summary>
+
+#### Argumentos
+Nenhum
+
+#### Retorna
+Nada
+
+```asmatmel
+restoreRegisters:
+    pop r0
+    pop r7
+    pop r6
+    pop r5
+    pop r4
+    pop r3
+    pop r2
+    pop r1
+    push r0
+    loadn r0, #0
+    rts
+        ```
+</details>
+
+:::warning
+As funções [saveRegisters](#saveRegisters) e [restoreRegisters](#restoreRegisters) são requeridas para o funcionamento de muitas outras funções aqui exibidas.
+:::
+</DynamicSection>
+
+<DynamicSection>
+
+## Matemáticas
+
+<details><summary>
+
+### screenPosition
+
+ Dados valores para linha e coluna, retorna o índice que corresponde a posição esperada na tela. Valores maiores que aqueles definidos em `HEIGHT` e `WIDTH` descrevem voltas na tela.
+ Dados valores para linha e coluna, retorna o índice que corresponde a posição esperada na tela. Valores maiores que aqueles definidos em `HEIGHT` e `WIDTH` descrevem voltas na tela.
+
+</summary>
+
+#### Argumentos
+| Label   | Valor esperado   |
+| :---    | :---             |
+| Arg1    | Linha            |
+| Arg2    | Coluna           |
+| HEIGHT  | Altura da tela   |
+| WIDTH   | Largura da tela  |
+
+#### Returna
+| Label  | Valor esperado             |
+| :---   | :---                       |
+| Ret    | Índice da posição na tela  |
+
+```asmatmel
+screenPosition:
+    call saveRegisters
+    load r3, HEIGHT
+    load r4, WIDTH
+    mod r1, r1, r3
+    mul r1, r1, r4
+    mod r2, r2, r4
+    add r1, r1, r2
+    store Ret, r1
+    call restoreRegisters
+    rts
+```
+</details>
+</DynamicSection>
+
+## Impressão
+
+<DynamicSection>
+
+<details><summary>
+
+### printIntR
+Imprime um valor inteiro na tela, com alinhamento à direita.
+
+</summary>
+
+#### Argumentos
+| Label  | Valor esperado                             |
+| :---   | :---                                       |
+| Arg1   | Inteiro a ser impresso                     |
+| Arg2   | Posição na tela donde começar a impressão  |
+| Arg3   | Valor de cor para imprimir o número        |
+
+
+#### Retorna
+Nada
+
+```asmatmel
+printIntR:
+    call saveRegisters
+    loadn r4, #10        ; carrega o valor 10 para aplicar a operação de módulo
+    loadn r5, #'0'       ; carrega o valor índice do caractere 0
+
+    pirLoop:             ; inicia o laço de impressão
+        mod r6, r1, r4   ; obtém o dígito menos significativo de r1
+        add r6, r5, r6   ; aplica-o como um deslocamento no mapa de caracteres
+        add r6, r6, r3   ; aplica o valor da cor
+        outchar r6, r2   ; imprime o caractere na posição r2
+        div r1, r1, r4   ; divisão inteira de r1 por 10
+        jz pirEnd        ; sai do loop se r1 = 0
+        dec r2           ; caso contrário, decrementa r2
+        jmp pirLoop      ; e continua
+
+    pirEnd:
+        call restoreRegisters
+        rts
+```
+
+</details>
+</DynamicSection>
+
+<DynamicSection>
+
+## Input
+
+<details><summary>
+
+### takeInput
+Função que atrasa a execução do jogo por um período
+para obter uma entrada do jogador. Se a entrada é aquela
+esperada, o atraso é cancelado.
+</summary>
+
+#### Argumentos
+| Label  | Valor esperado    |
+| :---   | :---              |
+| Arg1   | Fator de atraso   |
+| Arg2   | Entrada esperada  |
+
+#### Retorna
+| Label  | Valor esperado    |
+| :---   | :---              |
+| Ret | 0, se não foi pressionada nenhuma tecla, caso contrário, o valor ASCII da tecla pressionada |
+
+```asmatmel
+takeInput:
+    call saveRegisters
+    loadn r3, #1000 ; Atraso base, implica um microssegundo em 1 MHz
+    loadn r4, #255  ; Valor padrão retornado por inchar quando não é detectado o pressionamento de qualquer tecla
+    store Ret, r0
+
+    delay_A:
+        mov r5, r1
+        delay_B:
+            inchar r6
+            cmp r4, r6
+            jeq delayContinue
+            store Ret, r6
+            cmp r2, r6
+            jeq delayEnd
+    delayContinue:
+        dec r5
+        jnz delay_B
+        dec r3
+        jnz delay_A
+    delayEnd:
+    call restoreRegisters
+    rts
+```
+:::tip
+A função takeInput pode ser utilizada para dar ao jogo uma dado intervalo entre as ações. Para tal basta passar o valor esperado para interromper o intervalo como sendo um que não pode ser correspondido: `0`.
+:::
+</details>
+</DynamicSection>

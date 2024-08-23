@@ -1,0 +1,77 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import { Highlight } from '@site/src/components/Highlight'
+
+# Simulador
+
+Software o qual simula, gráficamente, o resultado da execução de um dado programa, fosse este escrito na memória do processador ICMC.
+
+Este encontra-se disponível em duas versões:
+
+- **"*Original*":** possui como dependências do simulador os pacotes `gtk2` e `ncurses`, os quais devem ser instalados (recomenda-se com o gerenciador de pacotes da sua distribuição) antes de poder ser utilizado.
+
+- **Browser:** pode ser utilizado diretamente em um navegador gráfico. Este foi testado nos navegadores Firefox e Chromium;
+
+:::info À saber
+Apenas o simulador original necessita ser instalado para ser utilizado, aquele browser está acessível no endereço https://thiagoambiel.github.io/SimuladorICMC/. Não obstante, abaixo está descrito o processo de instalação para ambas as versões, tal que possam ser utilizados localmente.
+:::
+## Instalação
+
+Execute os seguintes comandos em seu terminal:
+
+<Tabs>
+    <TabItem value="Original">
+        ```bash
+        wget https://github.com/de-abreu/Processador-ICMC/raw/master/simulator/original_simulator.zip
+        unzip original_simulator.zip
+        cd original
+        gcc *.c -o sim
+        ```
+        Com isso você terá em mãos o executável `sim`. Leve-o ao diretório em que estiver trabalhando, conforme sua conveniência. GIT_ADDRESS
+
+    </TabItem>
+    <TabItem value="Browser">
+        :::warning
+        Assume-se pelo comando `open` que o browser a ser utilizado é aquele definido como sendo o padrão para o usuário em questão.
+        :::
+
+        ```bash
+        wget https://github.com/de-abreu/Processador-ICMC/raw/master/simulator/browser_simulator.zip
+        unzip browser_simulator.zip
+        open browser/index.html
+        ```
+    </TabItem>
+</Tabs>
+
+
+## Uso
+
+### Arquivos necessários à simulação
+Os simuladores necessitam de um par de arquivos `.mif` para operarem sobre: o primeiro referente ao programa － e gerado pelo [montador](/docs/componentes/montador) － e o segundo ao [charmap](/docs/guias/charmaps) correspondente, respectivamente. Para o simulador original, estes podem ser repassados conforme o comando
+
+```bash
+./sim programa.mif charmap.mif
+```
+
+Enquanto o simulador para browser, este, quando aberto, apresenta uma interface gráfica que propicia a navegação pelo gerenciador de arquivos para selecionar estes mesmos arquivos.
+
+:::tip
+Após a instalação, considere baixar o programa [HelloMom](https://github.com/de-abreu/Processador-ICMC/assembly-software/HelloMom/HelloMom.mif) e seu [charmap](https://github.com/de-abreu/Processador-ICMC/assembly-software/HelloMom/charmap.mif) e executar o simulador com estes para testar se o mesmo está funcionando.
+:::
+
+### Descrição da interface gráfica
+
+Ambos os simuladores possuem interfaces semelhantes entre si, as quais devem figurar os seguintes dois componentes:
+
+![Jogo *Frogger Demake*, rodando no simulador original](/img/simulador.svg)
+- **<Highlight color="#26762b">Registradores</Highlight>** Ao topo estão descritos os valores armazenados nos registradores.
+- **<Highlight color="#64272b">Instruções</Highlight>** A atual instrução sendo lida (primeira linha) e as instruções seguintes armazenadas na memória.
+
+Para saber o que são e o que fazem os **registradores** descritos pelo simulador, consulte a [seção referente a estes na página do processador](/docs/componentes/processador/#registradores).
+
+:::info Do you want to know more?
+A tempo de escrita deste documento, existem uma variedade de simuladores alternativos desenvolvido por alunos do ICMC. Dentre os quais:
+- [OpenGL_Simulator](https://github.com/de-abreu/Processador-ICMC/blob/master/simulator/opengl/README.md) por Breno Queiroz e Maria Eduarda Moreira;
+- [goICMCsim](https://github.com/lucasgpulcinelli/goICMCsim) por Lucas Pulcinelli;
+- [ICMC's CPU Emulator](https://proc.giroto.dev/) por Vinicius Giroto (este trata-se de uma IDE que contém seu próprio simulador).
+:::
