@@ -10,7 +10,7 @@ Este encontra-se disponível em duas versões:
 
 - **"*Original*":** possui como dependências do simulador os pacotes `gtk2` e `ncurses`, os quais devem ser instalados (recomenda-se com o gerenciador de pacotes da sua distribuição) antes de poder ser utilizado.
 
-- **Browser:** pode ser utilizado diretamente em um navegador gráfico. Este foi testado nos navegadores Firefox e Chromium;
+- **Browser:** pode ser utilizado diretamente em um navegador gráfico. Este foi testado nos navegadores Firefox (v129.0.1, 64-bit) e Chromium (v127.0.6533.119, 64-bit);
 
 :::info À saber
 Apenas o simulador original necessita ser instalado para ser utilizado, aquele browser está acessível no endereço https://thiagoambiel.github.io/SimuladorICMC/. Não obstante, abaixo está descrito o processo de instalação para ambas as versões, tal que possam ser utilizados localmente.
@@ -61,13 +61,15 @@ Após a instalação, considere baixar o programa [HelloMom](https://github.com/
 
 ### Descrição da interface gráfica
 
-Ambos os simuladores possuem interfaces semelhantes entre si, as quais devem figurar os seguintes dois componentes:
+Ambos os simuladores possuem interfaces semelhantes entre si, as quais devem figurar os seguintes dois componentes destacados em colorido:
 
 ![Jogo *Frogger Demake*, rodando no simulador original](/img/simulador.svg)
 - **<Highlight color="#26762b">Registradores</Highlight>** Ao topo estão descritos os valores armazenados nos registradores.
 - **<Highlight color="#64272b">Instruções</Highlight>** A atual instrução sendo lida (primeira linha) e as instruções seguintes armazenadas na memória.
 
-Para saber o que são e o que fazem os **registradores** descritos pelo simulador, consulte a [seção referente a estes na página do processador](/docs/componentes/processador/#registradores).
+:::note
+Para saber o que são, quais são, e o que fazem os **registradores**, consulte a [referente seção](/docs/linguagem-assembly/como-usar#registradores).
+:::
 
 :::info Do you want to know more?
 A tempo de escrita deste documento, existem uma variedade de simuladores alternativos desenvolvido por alunos do ICMC. Dentre os quais:

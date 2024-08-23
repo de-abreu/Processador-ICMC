@@ -178,7 +178,7 @@ main:    ; Continua a execução do código a partir deste ponto
 
 ## Funções
 
-Por "função", refere-se a uma porção de instruções que, juntas, desempenham uma finalidade específica. Tais porções são iniciadas com uma label que dá nome a função e a permite ser invocada por instruções [`call`](/docs/biblioteca/funcoes#call), e terminadas com a instrução `rts`, que retorna o `pc` a posição seguinte à instrução `call` que invocou a função. Um exemplo de função seria:
+Por "função", refere-se a uma porção de instruções que, juntas, desempenham uma finalidade específica. Tais porções são iniciadas com uma label que dá nome a função e a permite ser invocada por instruções [`call`](/docs/linguagem-assembly/instrucoes#call), e terminadas com a instrução `rts`, que retorna o `pc` a posição seguinte à instrução `call` que invocou a função. Um exemplo de função seria:
 ```asmatmel
 screenOffset:
     ; Gives the offset that, given the screen's dimensions, corresponds to a given column and row. Values beyond the screen's HEIGHT and WIDTH get wrapped around.
@@ -215,10 +215,10 @@ O montador já fornece algumas labels especiais jde uso opcionalj para esta fina
 
 Salvar o contexto dos registradores consiste em armazenar na pilha seus valores atuais ao iniciar uma função e recuperar o contexto destes consiste em restituir os valores da pilha ao final da função. Isso é importante para que funções aninhadas não interfiram com o funcionamento das funções que as chamaram, após terem executado.
 
-As funções [saveRegisters](/docs/biblioteca/funcoes#saveRegisters) e [restoreRegisters](/docs/biblioteca/funcoes#restoreRegisters) podem ser utilizadas ao inicio e fim de cada função para cumprir esta finalidade.
+As funções [saveRegisters](/docs/biblioteca/funcoes#saveregisters) e [restoreRegisters](/docs/biblioteca/funcoes#restoreregisters) podem ser utilizadas ao inicio e fim de cada função para cumprir esta finalidade.
 
 ## Loops
-Segmentos de instruções executados repetidamente até que uma condição, se alguma, seja satisfeita. Análogo aos comandos `for`, `while` ou `do while`, equivalente ao comando `goto`. Isso é feito por meio de instruções [`jmp`](/docs/biblioteca/funcoes#jmp), por exemplo:
+Segmentos de instruções executados repetidamente até que uma condição, se alguma, seja satisfeita. Análogo aos comandos `for`, `while` ou `do while`, equivalente ao comando `goto`. Isso é feito por meio de instruções [`jmp`](/docs/linguagem-assembly/instrucoes#jump), por exemplo:
 
 ```
 printInt:
