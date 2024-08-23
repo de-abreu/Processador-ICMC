@@ -1,9 +1,11 @@
-<img src="https://raw.githubusercontent.com/de-abreu/Processador-ICMC/master/website/static/img/icons8-spaceship.svg" align="left" width="192px"\>
+<img src="https://raw.githubusercontent.com/de-abreu/Processador-ICMC/master/website/static/img/icons8-spaceship.svg" align="left" width="192px"/>
+
 <img align="left" width="0" height="192px" hspace="10"/>
 
 # Processador ICMC
 
 [![GPL3](https://img.shields.io/badge/License-GPL3.0-blue)](/LICENSE)
+
 Ensino de organização e arquitetura de computadores por meio do desenvolvimento de jogos
 
 > Also in [🇺🇸](/i18n/README_en.md)
