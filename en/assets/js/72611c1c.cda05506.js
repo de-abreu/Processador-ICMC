@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[3911],{159:s=>{s.exports=JSON.parse('{"tags":[{"label":"subscriptions","permalink":"/Processador-ICMC/en/blog/tags/subscriptions","count":1}]}')}}]);

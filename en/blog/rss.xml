@@ -9,36 +9,36 @@
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <item>
-            <title><![CDATA[Projetos de jogos, turmas de 2025]]></title>
-            <link>https://de-abreu.github.io/Processador-ICMC/en/blog/projetos-2025</link>
-            <guid>https://de-abreu.github.io/Processador-ICMC/en/blog/projetos-2025</guid>
+            <title><![CDATA[Game projects, class of 2025]]></title>
+            <link>https://de-abreu.github.io/Processador-ICMC/en/blog/projects-2025</link>
+            <guid>https://de-abreu.github.io/Processador-ICMC/en/blog/projects-2025</guid>
             <pubDate>Fri, 16 Aug 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[Frogger Demake]]></description>
             <content:encoded><![CDATA[<p><img decoding="async" loading="lazy" src="https://github.com/de-abreu/frogger-demake/raw/main/screencapture.png" alt="Frogger Demake" class="img_ev3q"></p>
 <blockquote>
-<p>Simulador executando <em>Frogger Demake</em>, projeto desenvolvido no ano anterior</p>
+<p>Simulator executing <em>Frogger Demake</em>, a project developed in the previous year</p>
 </blockquote>
-<p>As seguintes planilhas descrevem os projetos e as datas de apresentação dos jogos － <em>que haverão de ser</em> －  criados pelas turmas da disciplina <strong>Prática em Organização e Arquitetura de Computadores</strong> (SSC0119):</p>
+<p>The following sheets list projects and their presentation dates which －<em>should be</em> － created by students of the discipline <strong>Practice in Computer Architecture and Organization</strong> (SSC0119):</p>
 <ul>
-<li><a href="https://docs.google.com/spreadsheets/d/139b0paOBjMLchkTL-MqWzrbRFleIxnT2CeBUTQnGGTI/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Projetos</a></li>
-<li><a href="https://docs.google.com/spreadsheets/d/1yADnkSpJPMvRZS4aW9H9d7QvFtcRUHIftQRed00YM5g/edit?gid=0#gid=0" target="_blank" rel="noopener noreferrer">Apresentações</a></li>
+<li><a href="https://docs.google.com/spreadsheets/d/139b0paOBjMLchkTL-MqWzrbRFleIxnT2CeBUTQnGGTI/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Projects</a></li>
+<li><a href="https://docs.google.com/spreadsheets/d/1yADnkSpJPMvRZS4aW9H9d7QvFtcRUHIftQRed00YM5g/edit?gid=0#gid=0" target="_blank" rel="noopener noreferrer">Presentations</a></li>
 </ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="instruções-aos-alunos-da-disciplina">Instruções aos alunos da disciplina<a href="https://de-abreu.github.io/Processador-ICMC/en/blog/projetos-2025#instru%C3%A7%C3%B5es-aos-alunos-da-disciplina" class="hash-link" aria-label="Direct link to Instruções aos alunos da disciplina" title="Direct link to Instruções aos alunos da disciplina">​</a></h2>
-<p>Para editar as planilhas, realize o acesso utilizando seu e-mail USP.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="planilha-de-projetos">Planilha de projetos<a href="https://de-abreu.github.io/Processador-ICMC/en/blog/projetos-2025#planilha-de-projetos" class="hash-link" aria-label="Direct link to Planilha de projetos" title="Direct link to Planilha de projetos">​</a></h3>
-<p>Preencha a todos os seguintes campos <strong>em uma linha vaga</strong>:</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="instructions-for-students-of-the-discipline">Instructions for students of the discipline<a href="https://de-abreu.github.io/Processador-ICMC/en/blog/projects-2025#instructions-for-students-of-the-discipline" class="hash-link" aria-label="Direct link to Instructions for students of the discipline" title="Direct link to Instructions for students of the discipline">​</a></h2>
+<p>To edit the spreadsheets, access them using your USP email address.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="projects-spreadsheet">Projects Spreadsheet<a href="https://de-abreu.github.io/Processador-ICMC/en/blog/projects-2025#projects-spreadsheet" class="hash-link" aria-label="Direct link to Projects Spreadsheet" title="Direct link to Projects Spreadsheet">​</a></h3>
+<p>Fill in all the following fields on an empty row:</p>
 <ul>
-<li><strong>Grupo</strong>: um número inteiro que deve ser o mesmo entre todos os integrantes do mesmo grupo. Ao inscrever o trabalho do grupo pela primeira vez, utilize o próximo número inteiro que não tenha sido utilizado (este número não terá qualquer relação com a ordem de apresentação dos trabalhos).</li>
-<li><strong>Título do trabalho</strong>: deve ser único.</li>
-<li><strong>Git</strong>: endereço de um repositório git contendo os arquivos do projeto sua respectiva documentação.</li>
-<li><strong>Nome e nUSP</strong>: conforme estes constam na carteirinha do aluno.</li>
-<li><strong>Membros</strong>: número de integrantes a compor o grupo.</li>
+<li><strong>Group</strong>: An integer that must be the same for all members of the same group. When registering the group's work for the first time, use the next available integer that hasn't been used yet (this number will not relate to the order of presentation of the works).</li>
+<li><strong>Title of the work</strong>: Must be unique.</li>
+<li><strong>Git</strong>: The address of a git repository containing the project files and its respective documentation.</li>
+<li><strong>Name and USP Number</strong>: As they appear on the student's ID card.</li>
+<li><strong>Members</strong>: The number of members composing the group.</li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="planilha-de-apresentações">Planilha de apresentações<a href="https://de-abreu.github.io/Processador-ICMC/en/blog/projetos-2025#planilha-de-apresenta%C3%A7%C3%B5es" class="hash-link" aria-label="Direct link to Planilha de apresentações" title="Direct link to Planilha de apresentações">​</a></h3>
-<p>Sobrescreva um dos horários disponíveis na planilha (quaisquer campos <code>"--------------"</code>) com a inscrição <code>PORG-xx</code>, onde <code>xx</code> é o número do seu grupo.</p>
-<div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>warning</div><div class="admonitionContent_BuS1"><p>Todas as apresentações serão conduzidas no <a href="https://www.openstreetmap.org/way/51782620" target="_blank" rel="noopener noreferrer">Bloco 6 do ICMC</a>, salas 6-305/306.</p></div></div>]]></content:encoded>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="presentations-spreadsheet">Presentations Spreadsheet<a href="https://de-abreu.github.io/Processador-ICMC/en/blog/projects-2025#presentations-spreadsheet" class="hash-link" aria-label="Direct link to Presentations Spreadsheet" title="Direct link to Presentations Spreadsheet">​</a></h3>
+<p>Overwrite one of the available time slots in the spreadsheet (any fields with <code>"--------------"</code>) with the entry <code>PORG-xx</code>, where <code>xx</code> is your group number.</p>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>info</div><div class="admonitionContent_BuS1"><p>All presentations will be held at <a href="https://www.openstreetmap.org/way/51782620" target="_blank" rel="noopener noreferrer">ICMC Block 6</a>, rooms 6-305/306.</p></div></div>]]></content:encoded>
             <author>de_abreu@usp.br (Guilherme de Abreu Barreto)</author>
-            <category>Inscrições</category>
+            <category>subscriptions</category>
         </item>
     </channel>
 </rss>
