@@ -2,3 +2,7 @@ inscricoes:
   label: Inscrições
   permalink: /inscricoes
   description: Planilhas listando projetos feitos por alunos e a data da apresentação destes
+registrations:
+  label: Registrations
+  permalink: /registrations
+  description: Spreadsheets listing projects made by students and the date of their presentation
