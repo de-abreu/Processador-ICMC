@@ -26,7 +26,7 @@ Additionally, by creating a [fork](https://docs.github.com/pull-requests/collabo
 
 Students must organize themselves into pairs or trios and, by the end of the semester, *have developed, published, and presented a game implemented on an FPGA board*. Each member of each group will be evaluated **individually**, as attested by their contribution to the project in the respective final presentation.
 
-Each semester, [a post referring to the current class](/blog/tags/subscriptions) will be added to the blog with links and instructions for students to subscribe their work.
+Each semester, [a post referring to the current class](/blog/tags/registrations) will be added to the blog with links and instructions for students to subscribe their work.
 
 The **evaluation criteria** for the project are:
 
