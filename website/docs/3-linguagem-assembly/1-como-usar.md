@@ -76,7 +76,7 @@ Indicado por `fr`, assume determinados valores para denotar quando
     - é uma divisão por zero
 
 :::info
-O flag register é utilizado em comandos do tipo call e jump; e consequentemente na criação de [funções](#funcoes) e [laços](#laços).
+O flag register é utilizado em comandos do tipo call e jump; e consequentemente na criação de [funções](#funções) e [laços](#laços).
 :::
 
 ### Stack Pointer

@@ -72,7 +72,7 @@ Indicated by `fr`, assumes certain values to denote when
 - the last arithmetic operation
     - results in zero
     - results in a negative number
-    - results in an [overflow](https://en.wikipedia.org/wiki/Integer_overflow)
+    - results in an [overflow](https:/.wikipedia.org/wiki/Integer_overflow)
     - is a division by zero
 
 :::info
@@ -118,7 +118,7 @@ aux : var #1  ; Variable 'aux'
 vet : var #10 ; Vector 'vet' of 10 positions
 ```
 
-The values of variables can be retrieved or assigned using commands of the type *load* and *store*, seen [later](/en/docs/linguagem-assembly/instrucoes).
+The values of variables can be retrieved or assigned using commands of the type *load* and *store*, seen [later](/docs/linguagem-assembly/instrucoes).
 
 ### static
 Receives an address (or label that points to it), and an immediate value, and at assembly time writes it to the described memory address. Example:
@@ -216,7 +216,7 @@ The assembler already provides some special labels of optional use for this purp
 
 Saving the context of registers consists of storing their current values on the stack at the start of a function and restoring their context consists of restoring the values from the stack at the end of the function. This is important so that nested functions do not interfere with the operation of the functions that called them, after they have executed.
 
-The functions [saveRegisters](/en/docs/biblioteca/funcoes#saveregisters) and [restoreRegisters](/en/docs/biblioteca/funcoes#restoreregisters) can be used at the beginning and end of each function to fulfill this purpose.
+The functions [saveRegisters](/docs/biblioteca/funcoes#saveregisters) and [restoreRegisters](/docs/biblioteca/funcoes#restoreregisters) can be used at the beginning and end of each function to fulfill this purpose.
 
 ## Loops
 Segments of instructions executed repeatedly until a condition, if any, is satisfied. Similar to the commands `for`, `while`, or `do while`, and equivalent to the `goto` command. This is done through instructions [`jmp`](/docs/linguagem-assembly/instrucoes#jump), for example:
