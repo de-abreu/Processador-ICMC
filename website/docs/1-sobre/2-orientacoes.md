@@ -24,7 +24,6 @@ Não obstante, ao realizar um [fork](https://docs.github.com/pt/pull-requests/co
 Os alunos deverão organizar-se em duplas ou trios e, ao final do semestre, *ter desenvolvido, publicado e apresentado um jogo implementado em uma placa FPGA*. Cada integrante de cada grupo será avaliado **individualmente**, conforme atestada sua contribuição ao projeto na respectiva apresentação final.
 
 A cada semestre, [uma publicação referente a atual turma](/blog/tags/inscricoes) será acrescentada ao blog com links e instruções para os alunos inscreverem seus projetos.
-
 São os **critérios de avaliação** do projeto:
 
 1. **Implementação das instruções de máquina**: se as [instruções básicas](/docs/linguagem-assembly/instrucoes) foram implementadas e, se sim, foram estendidas.
@@ -42,7 +41,7 @@ São os **critérios de avaliação** do projeto:
 1. Criação do repositório git para armazenamento do projeto.
 2. [Implementação das instruções de máquina](/docs/guias/criando-instrucoes) para manipulação do processador.
 3. Criação do jogo e [realização de testes](/docs/guias/debugging) deste.
-4. [Implementação do jogo na placa FPGA](/docs/guias/ajustes-finais) e subsequente apresentação.
+4. [Implementação do jogo na placa FPGA](/docs/guias/ajustes-finais) para sua  subsequente apresentação.
 5. Atualização do repositório git e opcional atualização da documentação associada ao projeto do processador.
 
 ### Requisitos para o repositório Git do projeto

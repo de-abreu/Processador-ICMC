@@ -1,7 +1,10 @@
 ; Imprime um valor inteiro na tela, com alinhamento à direita.
+;
+; Argumentos:
 ; Arg1 = Valor inteiro a ser impresso
 ; Arg2 = Posição na tela a partir de onde começar a imprimir
 ; Arg3 = Valor de cor para imprimir o número
+;
 ; Retorna: Nada
 
 printIntR:

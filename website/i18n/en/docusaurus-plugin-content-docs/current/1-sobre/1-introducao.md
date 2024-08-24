@@ -1,3 +1,7 @@
+---
+title: 'Introduction'
+description: 'What is, and to what purpose serves, the ICMC Processor'
+---
 # Introduction
 
 The ICMC Processor is a project initiated by [PhD. Eduardo do Valle Simões](http://lattes.cnpq.br/4055872056358293) to teach Computer Organization and Architecture to students at the [Institute of Mathematical and Computational Sciences (Instituto de Ciências Matemáticas e Computação － ICMC)](https://icmc.usp.br/institucional/quem-somos) of the University of São Paulo, primarily through practical application.

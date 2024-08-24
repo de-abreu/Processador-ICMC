@@ -1,5 +1,5 @@
 ---
 title: 'IDE'
-description: 'O ambiente de desenvolvimento integrado (Integrated Desktop Environment)'
+description: 'O ambiente de desenvolvimento integrado (Integrated Development Environment)'
 ---
 

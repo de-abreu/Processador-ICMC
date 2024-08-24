@@ -7,7 +7,7 @@ description: Todas as instruções incluídas por padrão
 
 Abaixo encontra-se uma lista de todas as funções definidas por padrão para a linguagem assembly do processador ICMC. Para cada instrução acompanha-se
 - uma explicação da sua funciojnalidade ou um pseudo-código explicativo, este último em notação semelhante a encontrada na [linguagem de programação C](https://en.wikipedia.org/wiki/C_(programming_language)#Operators).
-- A especificação do formato da instrução em código binário. Assume-se as seguintes convenções:
+- a especificação do formato da instrução em código binário. Assume-se as seguintes convenções:
     - `x`: bit cujo valor para a instrução em questão não é significativo;
     - `|`: separação entre os campos da instrução;
     - `c`: "[carry](https://en.wikipedia.org/wiki/Carry_flag)"
@@ -19,7 +19,7 @@ Abaixo encontra-se uma lista de todas as funções definidas por padrão para a 
 
 Instruções para escrita (`store`) na, e leitura (`load`) da, memória.
 
-| Mneônico           | Pseudo-código  | Fromato da instrução                |
+| Mnemônico          | Pseudo-código  | Fromato da instrução                |
 | :---               | :---           | :---                                |
 | `store label, rx`  | `*label = rx`  | `110001 \| rx \| xxxxxxx \| > end`  |
 | `storei rx, ry`    | `**rx = ry`    | `111101 \| rx \| ry \| xxxx`        |
@@ -31,7 +31,7 @@ Instruções para escrita (`store`) na, e leitura (`load`) da, memória.
 
 Copia o valor de um registrador a outro.
 
-| Mneônico      | Pseudo-código  | Formato da instrução          |
+| Mnemônico     | Pseudo-código  | Formato da instrução          |
 | :---          | :---           | :---                          |
 | `mov rx, ry`  | `rx = ry`      | `110011 \| rx \| ry \| xxx0`  |
 | `mov rx, sp`  | `rx = sp`      | `110011 \| rx \| xxxxx01`     |
@@ -39,7 +39,7 @@ Copia o valor de um registrador a outro.
 
 ## Operações aritméticas
 
-| Mneônico           | Pseudo-código           | Formato da instrução             |
+| Mnemônico          | Pseudo-código           | Formato da instrução             |
 | :---               | :---                    | :---                             |
 | `add rx, ry, rz`   | `rx = ry + rz`          | `100000 \| rx \| ry \| rz \| 0`  |
 | `addc rx, ry, rz`  | `rx = ry + rz + carry`  | `100000 \| rx \| ry \| rz \| 1`  |
@@ -60,7 +60,7 @@ Quando uma operação aritmética resulta em zero ou número negativo, o registr
 
 ## Operações lógicas
 
-| Mneônico          | Pseudo-código    | Formato da instrução             |
+| Mnemônico         | Pseudo-código    | Formato da instrução             |
 | :---              | :---             | :---                             |
 | `and rx, ry, rz`  | `rx = ry & rz`   | `010010 \| rx \| ry \| rz \| x`  |
 | `or rx, ry, rz`   | `rx = ry \| rz`  | `010011 \| rx \| ry \| rz \| x`  |
@@ -72,28 +72,28 @@ Comandos aqueles que manipulam os valores armazenados nos registradores em sua f
 
 ### rotl
 
-| Mneônico         | Formato da instrução          |
+| Mnemônico        | Formato da instrução          |
 | :---             | :---                          |
 | `rotl rx, #num`  | `010000 \| rx \| 10x \| num`  |
 
 Move todos os bits `num` dígitos à **esquerda** sendo que os `num` dígitos **mais** significativos são "rotacionados": tornam-se os `num` dígitos **menos** significativos.
 ### rotr
 
-| Mneônico         | Formato da instrução          |
+| Mnemônico        | Formato da instrução          |
 | :---             | :---                          |
 | `rotr rx, #num`  | `010000 \| rx \| 11x \| num`  |
 
 Move todos os bits `num` dígitos à **direita** sendo que os `num` dígitos **menos** significativos tornam-se os `num` dígitos **mais** significativos.
 ### shiftl0
 
-| Mneônico            | Formato da instrução          |
+| Mnemônico           | Formato da instrução          |
 | :---                | :---                          |
 | `shiftl0 rx, #num`  | `010000 \| rx \| 000 \| num`  |
 
 Move todos os bits `num` dígitos à **esquerda**, e preenche os `num` bits menos significativos com `0`.
 ### shiftl1
 
-| Mneônico            | Formato da instrução          |
+| Mnemônico           | Formato da instrução          |
 | :---                | :---                          |
 | `shiftl1 rx, #num`  | `010000 \| rx \| 001 \| num`  |
 
@@ -101,7 +101,7 @@ Move todos os bits `num` dígitos à **esquerda**, e preenche os `num` bits meno
 
 ### shiftr0
 
-| Mneônico            | Formato da instrução          |
+| Mnemônico           | Formato da instrução          |
 | :---                | :---                          |
 | `shiftr0 rx, #num`  | `010000 \| rx \| 010 \| num`  |
 
@@ -109,7 +109,7 @@ Move todos os bits `num` dígitos à **direita**, e preenche os `num` bits mais 
 
 ### shiftr1
 
-| Mneônico            | Formato da instrução          |
+| Mnemônico           | Formato da instrução          |
 | :---                | :---                          |
 | `shiftr1 rx, #num`  | `010000 \| rx \| 011 \| num`  |
 
@@ -121,9 +121,9 @@ Em todas as instruções de movimentação de bits, `num` é um número inteiro 
 
 ## Entrada e saída
 ### Input
-| Mneônico          | Formato da instrução       |
-| :---              | :---                       |
-| `inchar rx`       | `110101 \| rx \| xxxxxxx`  |
+| Mnemônico    | Formato da instrução       |
+| :---         | :---                       |
+| `inchar rx`  | `110101 \| rx \| xxxxxxx`  |
 
 Armazena em `rx` um valor correspondente a uma tecla pressionada no momento em que a instrução é lida.
 
@@ -131,7 +131,7 @@ Armazena em `rx` um valor correspondente a uma tecla pressionada no momento em q
 O valor armazenado quando nenhuma tecla estiver pressionada é **255**.
 :::
 ### Output
-| Mneônico          | Formato da instrução    |
+| Mnemônico         | Formato da instrução    |
 | :---              | :---                    |
 | `outchar rx, ry`  | `110010 \| rx \| xxxx`  |
 
@@ -140,7 +140,7 @@ Imprime na posição da tela de índice `ry` o caractere de índice `rx`.
 
 Armazena (`push`) ou retira (`pop`) dados da pilha.
 
-| Mneônico   | Formato da instrução            |
+| Mnemônico   | Formato da instrução            |
 | :---       | :---                            |
 | `push rx`  | `000101 \| rx \| 0 \| xxxxxx`   |
 | `push fr`  | `000101 \| xxx \| 1 \| xxxxxx`  |
@@ -148,7 +148,7 @@ Armazena (`push`) ou retira (`pop`) dados da pilha.
 | `push fr`  | `000110 \| xxx \| 1 \| xxxxxx`  |
 
 ## Comparação
-| Mneônico      | Formato da instrução          |
+| Mnemônico     | Formato da instrução          |
 | :---          | :---                          |
 | `cmp rx, ry`  | `010110 \| rx \| ry \| xxxx`  |
 
@@ -157,7 +157,7 @@ A depender do resultado da comparação entre os valores armazenados em `rx` e `
 
 Se a condição posta corresponder àquela lida em `fr`, então `pc = *label`
 
-| Mneônico      | Condição                                       | Formato da instrução        |
+| Mnemônico     | Condição                                       | Formato da instrução        |
 | :---          | :---                                           | :---                        |
 | `jmp label`   | Incondicional                                  | `000010 \| 0000 \| xxxxxx`  |
 | `jeq label`   | Igual (***EQ**ual*)                            | `000010 \| 0001 \| xxxxxx`  |
@@ -183,7 +183,7 @@ push pc
 jmp label
 ```
 
-| Mneônico      | Condição                                       | Formato da instrução        |
+| Mnemônico     | Condição                                       | Formato da instrução        |
 | :---          | :---                                           | :---                        |
 | `call label`  | Incondicional                                  | `000011 \| 0000 \| xxxxxx`  |
 | `ceq label`   | Igual (***EQ**ual*)                            | `000011 \| 0001 \| xxxxxx`  |
@@ -212,18 +212,18 @@ inc sp
 inc pc
 ```
 
-| Mneônico  | Formato da Instrução            |
-| :---      | :---                            |
-| `rts`     | `000100 \| xxxx \| x \| xxxxx`  |
+| Mnemônico  | Formato da Instrução            |
+| :---       | :---                            |
+| `rts`      | `000100 \| xxxx \| x \| xxxxx`  |
 
 
 ## Controle
 
-| Mneônico  | Ação                           | Formato da Instrução        |
-| :---      | :---                           | :---                        |
-| `clearc`  | `c = 0`                        | `001000 \| 0 \| xxxxxxxxx`  |
-| `setc`    | `c = 1`                        | `001000 \| 1 \| xxxxxxxxx`  |
-| `halt`    | Para execução do programa      | `001111 \| xxxxxxxxxx`      |
-| `nop`     | Não realiza qualquer operação  | `000000 \| xxxxxxxxxx`      |
-| `breakp`  | Insere ponto de parada         | `001110 \| xxxxxxxxxx`      |
+| Mnemônico  | Ação                           | Formato da Instrução        |
+| :---       | :---                           | :---                        |
+| `clearc`   | `c = 0`                        | `001000 \| 0 \| xxxxxxxxx`  |
+| `setc`     | `c = 1`                        | `001000 \| 1 \| xxxxxxxxx`  |
+| `halt`     | Para execução do programa      | `001111 \| xxxxxxxxxx`      |
+| `nop`      | Não realiza qualquer operação  | `000000 \| xxxxxxxxxx`      |
+| `breakp`   | Insere ponto de parada         | `001110 \| xxxxxxxxxx`      |
 

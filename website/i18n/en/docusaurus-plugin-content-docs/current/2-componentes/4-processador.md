@@ -1,5 +1,5 @@
 ---
 title: 'Processador'
-description: 'O projeto Quartus para compilação do Processador ICMC em placas FPGA'
+description: 'The Quartus project for the compilation of the ICMC Processor into FPGA boards.'
 ---
 

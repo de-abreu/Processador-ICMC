@@ -1,6 +1,6 @@
 ---
 title: 'Aulas gravadas'
-description: 'Aulas da disciplina de Prática em Organização e Arquitetura de Computadores'
+description: 'Aulas remotas da disciplina de Prática em Organização e Arquitetura de Computadores'
 ---
 
 # Aulas gravadas

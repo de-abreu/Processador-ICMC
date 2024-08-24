@@ -76,7 +76,7 @@ Indicado por `fr`, assume determinados valores para denotar quando
     - é uma divisão por zero
 
 :::info
-O flag register é utilizado em comandos do tipo call e jump; e consequentemente na criação de [funções](#funcoes) e [loops](#loops).
+O flag register é utilizado em comandos do tipo call e jump; e consequentemente na criação de [funções](#funcoes) e [laços](#laços).
 :::
 
 ### Stack Pointer
@@ -99,16 +99,16 @@ push r0 ; Decresce o o endereço no registrador sp em uma posição e armazena o
 pop r1  ; Armazena em r1 o dado no endereço de memória descrito por sp e
         ; incrementa sp em uma posição.
 ```
-Como resultado desta operação efetivamente se realiza uma cópia do dado em `r0` para `r1`.
+Como resultado desta operação se realiza uma cópia do dado em `r0` para `r1`.
 
 :::info
-A pilha é comumente utilizada como meio de [salvar e recuperar o contexto] dos registradores ao fazer uso de funções aninhadas.
+A pilha é comumente utilizada como meio de [salvar e recuperar o contexto](#salvar-e-recuperar-o-contexto-dos-registradores) dos registradores ao fazer uso de funções aninhadas.
 :::
 
 ## Labels
 Nomenclaturas designadas para referenciar dadas posições de memória. Serão interpretados como labels todas as palavras seguidas pelo caractere `:`.
 
-Como se verá à seguir, este é um recurso útil para uma variedade de finalidades, como declarar variáveis, funções e loops.
+Como se verá à seguir, este é um recurso útil para uma variedade de finalidades, como declarar variáveis, funções e laços.
 ## Variáveis
 Variáveis podem ser criadas com o uso dos seguintes comandos:
 
@@ -180,14 +180,21 @@ main:    ; Continua a execução do código a partir deste ponto
 
 Por "função", refere-se a uma porção de instruções que, juntas, desempenham uma finalidade específica. Tais porções são iniciadas com uma label que dá nome a função e a permite ser invocada por instruções [`call`](/docs/linguagem-assembly/instrucoes#call), e terminadas com a instrução `rts`, que retorna o `pc` a posição seguinte à instrução `call` que invocou a função. Um exemplo de função seria:
 ```asmatmel
-screenOffset:
-    ; Gives the offset that, given the screen's dimensions, corresponds to a given column and row. Values beyond the screen's HEIGHT and WIDTH get wrapped around.
-    ; Arguments:
-    ; a1 = row
-    ; a2 = column
-    ; Returns:
-    ; a0 = offset
+; Dados valores para linha e coluna, retorna o índice que
+; corresponde a posição esperada na tela. Valores maiores que
+; aqueles definidos em `HEIGHT` e `WIDTH` descrevem voltas na
+; tela.
+;
+; Argumentos:
+; Arg1:   Linha
+; Arg2:   Coluna
+; HEIGHT: Altura da tela
+; WIDTH:  Largura da tela
+;
+; Retorna:
+; Ret:    Índice da posição na tela
 
+screenPosition:
     call saveRegisters
     load r3, HEIGHT
     load r4, WIDTH
@@ -195,7 +202,7 @@ screenOffset:
     mul r1, r1, r4
     mod r2, r2, r4
     add r1, r1, r2
-    store a0, r1
+    store Ret, r1
     call restoreRegisters
     rts
 ```
@@ -206,7 +213,7 @@ Os seguintes atributos são opcionais, mas recomendados, na construção de uma 
 #### Argumentos e valor de retorno
 Usualmente funções recebem a um ou mais valores como "argumentos" de entrada e "retornam" um único valor de saída como resultado da sua operação. Tais valores podem ser armazenados em registradores, mas é recomendado que estes sejam lidos e escritos na memória, tido que registradores são escaços.
 
-O montador já fornece algumas labels especiais jde uso opcionalj para esta finalidade:
+O montador já fornece algumas labels especiais de uso opcional para esta finalidade:
 
 - `Argx`, onde `x` é um número inteiro de 0 à 9: servem a armazenar argumentos da função.
 - `Ret`: serve a armazenar o retorno da função.
@@ -217,32 +224,35 @@ Salvar o contexto dos registradores consiste em armazenar na pilha seus valores 
 
 As funções [saveRegisters](/docs/biblioteca/funcoes#saveregisters) e [restoreRegisters](/docs/biblioteca/funcoes#restoreregisters) podem ser utilizadas ao inicio e fim de cada função para cumprir esta finalidade.
 
-## Loops
-Segmentos de instruções executados repetidamente até que uma condição, se alguma, seja satisfeita. Análogo aos comandos `for`, `while` ou `do while`, equivalente ao comando `goto`. Isso é feito por meio de instruções [`jmp`](/docs/linguagem-assembly/instrucoes#jump), por exemplo:
+## Laços
+Segmentos de instruções executados repetidamente até que uma condição, se alguma, seja satisfeita. Análogo aos comandos `for`, `while` ou `do while`, e equivalente ao comando `goto`. Isso é feito por meio de instruções [`jmp`](/docs/linguagem-assembly/instrucoes#jump), por exemplo:
 
 ```
-printInt:
-    ; Prints a right-aligned integer value on screen.
-    ; a1 = Integer value to be printed
-    ; a2 = Right-aligned position in the screen from where to start printing
-    ; a3 = Color value to print number
-    ; Returns: Nothing
+; Imprime um valor inteiro na tela, com alinhamento à direita.
+;
+; Argumentos:
+; Arg1 = Valor inteiro a ser impresso
+; Arg2 = Posição na tela a partir de onde começar a imprimir
+; Arg3 = Valor de cor para imprimir o número
+;
+; Retorna: Nada
 
+printIntR:
     call saveRegisters
-    loadn r4, #10    ; load the value 10 to apply the mod operation
-    loadn r5, #'0'   ; load index value of the character 0
+    loadn r4, #10        ; carrega o valor 10 para aplicar a operação de módulo
+    loadn r5, #'0'       ; carrega o valor índice do caractere 0
 
-    printIntLoop:    ; start printing loop
-        mod r6, r1, r4   ; get least significant digit from r1
-        add r6, r5, r6   ; apply it as an offset to the character map
-        add r6, r6, r3   ; apply color value
-        outchar r6, r2   ; print character at position r2
-        div r1, r1, r4   ; integer division of r1 by 10
-        jz printIntEnd   ; escape loop if r1 = 0
-        dec r2           ; otherwise decrement r2
-        jmp printIntLoop ; and continue
+    pirLoop:    ; inicia o laço de impressão
+        mod r6, r1, r4   ; obtém o dígito menos significativo de r1
+        add r6, r5, r6   ; aplica-o como um deslocamento no mapa de caracteres
+        add r6, r6, r3   ; aplica o valor da cor
+        outchar r6, r2   ; imprime o caractere na posição r2
+        div r1, r1, r4   ; divisão inteira de r1 por 10
+        jz pirEnd        ; sai do loop se r1 = 0
+        dec r2           ; caso contrário, decrementa r2
+        jmp pirLoop      ; e continua
 
-    printIntEnd:
+    pirEnd:
         call restoreRegisters
         rts
 ```
