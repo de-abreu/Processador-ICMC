@@ -2,12 +2,13 @@ import Heading from '@theme/Heading';
 import Translate from '@docusaurus/Translate';
 import clsx from 'clsx';
 import styles from './styles.module.css';
+import useBaseUrl from '@docusaurus/useBaseUrl'
 
 type FeatureItem = {
     title: JSX.Element;
     Svg: React.ComponentType<React.ComponentProps<'svg'>>;
     description: JSX.Element;
-    link: string;
+    path: string;
 };
 
 const FeatureList: FeatureItem[] = [
@@ -21,7 +22,7 @@ const FeatureList: FeatureItem[] = [
                 </Translate>
             </>
         ),
-        link: '/docs/category/linguagem-assembly'
+        path: '/docs/category/linguagem-assembly'
     },
     {
         title: (<><Translate>Prototipável</Translate></>),
@@ -31,7 +32,7 @@ const FeatureList: FeatureItem[] = [
                 <Translate>Projetado e testado para uso em placas Intel FPGA, dispondo de uma variedade de simuladores.</Translate>
             </>
         ),
-        link: '/docs/category/componentes'
+        path: '/docs/category/componentes'
     },
     {
         title: (<><Translate>Biblioteca de jogos</Translate></>),
@@ -41,13 +42,14 @@ const FeatureList: FeatureItem[] = [
                 <Translate>Jogos e respectivos códigos-fonte disponíveis para consulta.</Translate>
             </>
         ),
-        link: '/docs/biblioteca/jogos'
+        path: '/docs/biblioteca/jogos'
     },
 ];
 
-function Feature({ title, Svg, description, link }: FeatureItem) {
+function Feature({ title, Svg, description, path }: FeatureItem) {
+    const link = useBaseUrl(path)
     return (
-        <div className={clsx('col col--4')}>
+        <div className={clsx('col col--4')} >
             <div className="text--center">
                 <Svg className={styles.featureSvg} role="img" />
             </div>
