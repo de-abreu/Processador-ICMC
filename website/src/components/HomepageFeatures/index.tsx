@@ -29,7 +29,9 @@ const FeatureList: FeatureItem[] = [
         Svg: require('@site/static/img/icons8-chip.svg').default,
         description: (
             <>
-                <Translate>Projetado e testado para uso em placas Intel FPGA, dispondo de uma variedade de simuladores.</Translate>
+                <Translate>
+                    Projetado e testado para uso em placas Intel FPGA, dispondo de uma variedade de simuladores.
+                </Translate>
             </>
         ),
         path: '/docs/category/componentes'
@@ -39,7 +41,9 @@ const FeatureList: FeatureItem[] = [
         Svg: require('@site/static/img/icons8-games-folder.svg').default,
         description: (
             <>
-                <Translate>Jogos e respectivos códigos-fonte disponíveis para consulta.</Translate>
+                <Translate>
+                    Jogos e respectivos códigos-fonte disponíveis para consulta.
+                </Translate>
             </>
         ),
         path: '/docs/biblioteca/jogos'

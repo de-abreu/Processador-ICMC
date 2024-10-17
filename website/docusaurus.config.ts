@@ -32,7 +32,7 @@ const config: Config = {
             {
                 docs: {
                     sidebarPath: './sidebars.ts',
-                    editUrl: 'https://github.com/de-abreu/Processador-ICMC/tree/master/website/'
+                    editUrl: 'https://github.com/de-abreu/Processador-ICMC/edit/master/website'
                 },
                 blog: {
                     showReadingTime: true,
@@ -40,6 +40,9 @@ const config: Config = {
                         type: ['rss', 'atom'],
                         xslt: true,
                     },
+                    onInlineTags: 'warn',
+                    onInlineAuthors: 'warn',
+                    onUntruncatedBlogPosts: 'warn',
                 },
                 theme: {
                     customCss: './src/css/custom.css',
@@ -49,6 +52,11 @@ const config: Config = {
     ],
 
     themeConfig: {
+        algolia: {
+            appId: 'U1WGMTK1KS',
+            apiKey: '92e61e0b3898f7b073d2803c0fcfa7f5',
+            indexName: 'de-abreuio',
+        },
         navbar: {
             title: 'Processador ICMC',
             logo: {
