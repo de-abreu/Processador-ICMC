@@ -32,7 +32,7 @@ const config: Config = {
             {
                 docs: {
                     sidebarPath: './sidebars.ts',
-                    editUrl: 'https://github.com/de-abreu/Processador-ICMC/edit/master/website'
+                    editUrl: 'https://github.com/de-abreu/Processador-ICMC/edit/master/website/'
                 },
                 blog: {
                     showReadingTime: true,
